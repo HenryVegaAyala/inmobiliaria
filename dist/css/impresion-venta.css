@@ -1,0 +1,27 @@
+#pnlCuentas,
+#pnlVenta,
+#pnlDivision,
+#pnlEstadoMesa,
+#pnlCategoria,
+.page-region,
+.appbar {
+	display: none !important;
+}
+
+.panel_impresion {
+	display: block !important;
+	padding-top: 25px;
+	font-size: 10pt !important;
+	font-family: Courier, 'Courier New', monospace, sans-serif;
+}
+
+.panel_impresion table {
+	display: block !important;
+	border: none !important;
+	height: auto !important;
+	width: 100% !important;
+}
+
+.panel_impresion table td {
+	padding: 2px 10px;
+}

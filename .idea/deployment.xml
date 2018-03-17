@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="inmobiliaria">
+    <serverData>
+      <paths name="inmobiliaria">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/public_html/.well-known" />
+            <excludedPath path="/public_html/bootstrap" />
+            <excludedPath path="/public_html/common" />
+            <excludedPath path="/public_html/dist" />
+            <excludedPath path="/public_html/media" />
+            <excludedPath path="/public_html/plugins" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.well-known" />
+            <excludedPath local="true" path="$PROJECT_DIR$/bootstrap" />
+            <excludedPath local="true" path="$PROJECT_DIR$/common" />
+            <excludedPath local="true" path="$PROJECT_DIR$/dist" />
+            <excludedPath local="true" path="$PROJECT_DIR$/media" />
+            <excludedPath local="true" path="$PROJECT_DIR$/plugins" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

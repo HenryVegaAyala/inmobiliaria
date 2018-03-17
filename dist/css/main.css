@@ -1,0 +1,300 @@
+.maincontent {
+background-color: #fff;
+height: 100%;
+padding-top: 50px;
+}
+
+.generic-panel {
+position: relative;
+height: 100%;
+overflow: hidden;
+}
+
+.generic-panel > .gp-header,
+.generic-panel > .gp-footer {
+position: absolute;
+left: 0;
+min-height: 60px;
+width: 100%;
+/*overflow: hidden;*/
+}
+
+.generic-panel > .gp-header {
+top: 0;
+}
+
+.generic-panel > .gp-footer {
+bottom: 0;
+/*padding-top: 10px;
+padding-bottom: 10px; */
+}
+
+.generic-panel > .gp-body {
+padding-top: 60px;
+padding-bottom: 60px;
+height: 100%;
+overflow: hidden;
+}
+
+.generic-panel.gp-no-header > .gp-body {
+padding-top: 0 !important;
+}
+
+.generic-panel.gp-no-footer > .gp-body {
+padding-bottom: 0 !important;
+}
+
+.generic-panel.gp-no-body > .gp-body {
+padding: 0 !important;
+display: none !important;
+}
+
+.generic-panel.gp-no-body.gp-expand-header .gp-header {
+height: 100% !important;
+}
+
+#gpEstadoCuenta > .gp-header {
+height: 150px;
+padding: 10px;
+}
+
+#gpEstadoCuenta > .gp-body {
+padding: 150px 10px 0;
+}
+
+#pnlPermisos .gp-header,
+#pnlPermisos .gp-header .tile-area  {
+height: 130px;
+overflow: hidden;
+}
+
+#pnlPermisos .gp-header .tile-area  {
+height: 120px;
+max-height: 120px;
+overflow-y: hidden;
+overflow-x: auto;
+white-space:nowrap;
+}
+
+/*.pnlDetalle > .gp-header {
+height: 70px;
+padding: 5px;
+}
+
+.pnlDetalleDos > .gp-header {
+height: 140px;
+padding: 5px;
+}
+
+.pnlDetalle > .gp-body {
+padding-top: 80px;
+}
+
+.pnlDetalleDos > .gp-body {
+padding-top: 140px;
+}*/
+
+#panelFormula > .gp-header {
+height: 220px;
+padding: 10px 20px;
+}
+
+#panelFormula > .gp-body {
+padding: 240px 15px 10px;
+}
+
+#pnlConcepto > .gp-header {
+height: 90px;
+}
+
+#pnlConcepto > .gp-body {
+padding-top: 90px;
+}
+
+#pnlMainFormula .colTwoPanel1 {
+width: 45%;
+}
+
+#pnlMainFormula .colTwoPanel2 {
+width: 55%;
+}
+
+#gpConcepto > .gp-header {
+height: 50%;
+}
+
+#gpConcepto > .gp-body {
+height: 50%;
+position: absolute !important;
+padding: 0;
+top: 50%;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+#pnlCobranza .colTwoPanel1 > .generic-panel > .gp-header {
+height: 280px;
+}
+
+#pnlCobranza .colTwoPanel1 > .generic-panel > .gp-body {
+padding-top: 280px;
+}
+
+#pnlConceptoFacturacion .gp-body {
+padding-bottom: 56px;
+}
+
+#pnlConceptoFacturacion .gp-footer {
+height: 56px;
+}
+
+#pnlNuevoModelo > .gp-header {
+height: 92px;
+}
+
+#pnlNuevoModelo > .gp-body {
+padding: 92px 10px 60px;
+}
+
+
+#pnlImportConsumo > .gp-header {
+height: 150px;
+}
+
+#pnlImportConsumo > .gp-body {
+padding-top: 150px;
+}
+
+#pnlPropiedadSelected .gp-header {
+height: 48px;
+}
+
+#pnlPropiedadSelected .gp-body {
+padding-top: 48px;
+}
+
+#gpPropiedad > .gp-body {
+padding-bottom: 220px;
+}
+
+#gpPropiedad > .gp-footer {
+height: 220px;
+}
+
+#pnlPermisos .gp-header .tile-area .tile,
+#gvPersonalTurno .dato {
+box-shadow: #aaa 0px 0px 1px 0px inset;
+}
+
+#pnlPermisos .gp-header .tile-area .tile {	
+height: 80px;
+background-color: #eee;
+}
+
+#pnlFormApertura > .gp-header {
+height: 150px;
+}
+
+#pnlFormApertura > .gp-body {
+padding-top: 150px;
+}
+
+.panel-info {
+position: relative;
+height:62px;
+-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.panel-info .foto,
+.panel-info .info {
+display: inline-block;
+height: 100%;
+}
+
+.panel-info .foto {
+background-color: #ccc;
+color: #fff;
+font-size: 18pt;
+line-height: 62px;
+position: absolute;
+text-align: center;
+vertical-align: middle;
+width: 60px;
+}
+
+.panel-info .info {
+background-color: #eee;
+padding-left: 60px;
+width: 100%;
+}
+
+.panel-info.without-foto .info {
+padding-left: 0px;
+}
+
+.panel-info.without-foto .descripcion {
+overflow: hidden;
+height: 30px;
+line-height: 20px;
+padding: 5px;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.panel-info.big {
+height:140px;
+}
+
+.panel-info.big .descripcion {
+height: auto;
+margin: 0;
+max-height: 130px;
+overflow: hidden;
+text-overflow: ellipsis;
+vertical-align: top;
+white-space: nowrap;
+}
+
+.panel-info .info .grid {
+font-size: 10pt;
+font-weight: bold;
+color: #666;
+height: 20px;
+}
+
+.panel-info .info .grid div {
+padding-left: 10px;
+}
+
+.panel-info .info:hover {
+cursor: pointer;
+background-color: #4DB6AC;
+}
+.panel-info .info:hover h3,
+.panel-info .info:hover .detalle {
+color: #eee;
+}
+
+.top-panel {
+background-color: #eee;
+position: absolute !important;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1200 !important;
+}
+
+.panel-info .info h3, 
+.panel-info .info span {
+padding-left: 10px;
+}
+
+#pnlRecibo {
+height: -moz-calc(100% - 250px);
+height: -webkit-calc(100% - 250px);
+height: calc(100% - 250px);
+}
