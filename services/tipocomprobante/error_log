@@ -1,0 +1,7 @@
+[18-Mar-2018 22:18:34 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  relation &quot;tm_tipo_comprobante&quot; does not exist
+LINE 1: ...tm_descripcion, a.codigosunat, a.abreviatura FROM tm_tipo_co...
+                                                             ^
+QUERY:   SELECT a.tm_idtipocomprobante, a.tm_codigo, a.tm_nombre, a.tm_descripcion, a.codigosunat, a.abreviatura FROM tm_tipo_comprobante AS a WHERE a.tm_nombre LIKE '%' ||  $1  || '%' AND a.activo = 1 ORDER BY a.tm_nombre
+CONTEXT:  PL/pgSQL function &quot;pa_tipocomprobante_listar&quot; line 6 at RETURN QUERY in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[18-Mar-2018 22:18:34 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[18-Mar-2018 22:18:34 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105

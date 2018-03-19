@@ -1,0 +1,1 @@
+[25-Mar-2017 13:10:20 America/Lima] PHP Fatal error:  Call to undefined method Db::exec_simple_sql() in /home/cinadsacenter/public_html/services/change-owner-reports.php on line 21

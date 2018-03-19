@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="cina@localhost" uuid="882a8708-3734-40f5-825a-f11633a7d767">
+    <data-source name="cinadsac_inmobiliaria@localhost" uuid="e11dab4b-3a81-4924-9059-1df2a9424427">
       <database-info product="PostgreSQL" version="10.3" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <introspection-schemas>cina:</introspection-schemas>
+      <user-name>cinadsacenter</user-name>
+      <introspection-schemas>cinadsac_inmobiliaria:public</introspection-schemas>
     </data-source>
   </component>
 </project>

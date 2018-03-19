@@ -1,0 +1,89 @@
+[25-Feb-2018 11:44:31 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:44:50 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:45:53 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:46:29 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:55:39 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:56:07 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 11:56:17 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:02:42 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:23:00 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:43:51 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:52:46 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:56:56 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 12:59:56 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 13:51:36 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:01:18 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:04:41 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:07:20 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:07:42 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:11:02 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:12:20 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:12:21 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:16:36 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[25-Feb-2018 14:16:54 America/Lima] PHP Fatal error:  Call to undefined function pg_connect() in /home/cinadsacenter/public_html/adata/Db.class.php on line 56
+[15-Mar-2018 00:22:44 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  unterminated quoted string at or near &quot;')&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin', 'adad' OR 1=1')
+                                                              ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:22:44 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:22:44 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:22:44 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:23:43 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;OR&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin', 'asasas') OR 1=1)')
+                                                           ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:23:43 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:23:43 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:23:43 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:26:26 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  unterminated quoted string at or near &quot;')&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('amdin', 'jajja' OR (1=1')
+                                                                ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:26:26 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:26:26 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:26:26 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:27:03 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;OR&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin', 'admin') OR (1=01')
+                                                          ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:27:03 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:27:03 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:27:03 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:27:22 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;OR&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin', 'admin') OR (1='1')
+                                                          ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:27:22 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:27:22 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:27:22 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:30:00 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;s&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin', 'admin's) where ('1...
+                                                        ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:30:00 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:30:00 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:30:00 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:30:55 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at end of input
+LINE 1: ...ELECT * FROM pa_usuario_login ('admin', 'amdin'-- okokokok')
+                                                                       ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:30:55 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:30:55 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:30:55 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:31:27 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at end of input
+LINE 1: SELECT * FROM pa_usuario_login ('admin' --', 'admin')
+                                                             ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:31:27 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:31:27 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:31:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:32:43 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at end of input
+LINE 1: SELECT * FROM pa_usuario_login ('Brian' --', 'asasas')
+                                                              ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:32:43 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:32:43 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:32:43 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:47:53 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;asd&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('asdasd', 'asdasdsad'asd')
+                                                             ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:47:53 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:47:53 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:47:53 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32
+[15-Mar-2018 00:48:16 America/Lima] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;assadasd&quot;
+LINE 1: SELECT * FROM pa_usuario_login ('admin'', 'assadasd')
+                                                   ^ in /home/cinadsacenter/public_html/adata/Db.class.php on line 102
+[15-Mar-2018 00:48:16 America/Lima] PHP Warning:  pg_fetch_array() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 74
+[15-Mar-2018 00:48:16 America/Lima] PHP Warning:  pg_free_result() expects parameter 1 to be resource, boolean given in /home/cinadsacenter/public_html/adata/Db.class.php on line 105
+[15-Mar-2018 00:48:16 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cinadsacenter/public_html/adata/Db.class.php:108) in /home/cinadsacenter/public_html/acceso.php on line 32

@@ -1,0 +1,2 @@
+[22-Sep-2017 07:27:46 America/Lima] PHP Fatal error:  Call to undefined method clsCobranza::CobranzaFacturaSaldo__OtroAnho() in /home/cinadsacenter/public_html/services/cobranza/cobranza-post.php on line 138
+[22-Sep-2017 07:27:50 America/Lima] PHP Fatal error:  Call to undefined method clsCobranza::CobranzaFacturaSaldo__OtroAnho() in /home/cinadsacenter/public_html/services/cobranza/cobranza-post.php on line 138
