@@ -1,12 +1,13 @@
 <?php
 date_default_timezone_set('America/Lima');
 
-class Db {
-	private $link;
-	private $stmt;
-	private $array;
+class Db
+{
+    private $link;
+    private $stmt;
+    private $array;
 
-	var $host = '';
+    var $host = '';
     /**
      * Username used to connect to database
      */
@@ -25,14 +26,14 @@ class Db {
     var $dbName = '';
 
 
-	public function Db()
-	{
-		
-	}
+    public function Db()
+    {
 
-	private function conectar()
-	{
-		if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')){
+    }
+
+    private function conectar()
+    {
+        if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')) {
             $host = 'localhost';
             $port = '5432';
             $user = 'postgres';
@@ -45,141 +46,147 @@ class Db {
             $password = 'root';
             $db = 'cinadsac_inmobiliaria';
         }
-		
-		$this->host     = $host;
-		$this->port     = $port;
+
+        $this->host = $host;
+        $this->port = $port;
         $this->username = $user;
-        $this->passwd   = $password;
-        $this->dbName   = $db;
+        $this->passwd = $password;
+        $this->dbName = $db;
 
-		$conn = pg_connect('host='.$host.' port='.$port.' dbname='.$db.' user='.$user.' password='.$password);
-		pg_set_client_encoding($conn, "UNICODE");
-		
-		$this->link = $conn;
-	}
+        $conn = pg_connect('host=' . $host . ' port=' . $port . ' dbname=' . $db . ' user=' . $user . ' password=' . $password);
+        pg_set_client_encoding($conn, "UNICODE");
 
-	private function desconectar()
-	{
-		pg_close($this->link);
-	}
+        $this->link = $conn;
+    }
 
-	private function obtener_filas($stmt)
-	{
-		$fetchrow = array();
+    private function desconectar()
+    {
+        pg_close($this->link);
+    }
 
-		/*while ($row = pg_fetch_array($stmt, NULL, PGSQL_ASSOC))
-			$fetchrow[] = array_map('utf8_encode', $row);*/
+    private function obtener_filas($stmt)
+    {
+        $fetchrow = array();
 
-		while ($row = pg_fetch_array($stmt, NULL, PGSQL_ASSOC))
-			$fetchrow[] = $row;
+        /*while ($row = pg_fetch_array($stmt, NULL, PGSQL_ASSOC))
+            $fetchrow[] = array_map('utf8_encode', $row);*/
 
-		$this->array = $fetchrow;
-		return $this->array;
-	}
+        while ($row = pg_fetch_array($stmt, null, PGSQL_ASSOC)) {
+            $fetchrow[] = $row;
+        }
 
-	public function exec_simple_sql($strsql)
-	{
-		$this->conectar();
-		$rs_output = pg_query($this->link, $strsql);
-		echo pg_last_error($this->link);
-		$this->desconectar();
+        $this->array = $fetchrow;
+        return $this->array;
+    }
 
-		return 1;
-	}
+    public function exec_simple_sql($strsql)
+    {
+        $this->conectar();
+        $rs_output = pg_query($this->link, $strsql);
+        echo pg_last_error($this->link);
+        $this->desconectar();
 
-	public function exec_sp_select($sp_name, $sp_params)
-	{
-		$strsql = 'SELECT * FROM '.$sp_name.' (';
+        return 1;
+    }
 
-		if (is_array($sp_params))
-			$strsql .= '\'' . implode($sp_params, '\', \'') . '\'';	
-		
-		$strsql .= ')';
+    public function exec_sp_select($sp_name, $sp_params)
+    {
+        $strsql = 'SELECT * FROM ' . $sp_name . ' (';
 
-		$this->conectar();
-		
-		$rs_output = pg_query($this->link, $strsql);
-		$result = $this->obtener_filas($rs_output);
-		$this->stmt = $rs_output;
-		pg_free_result($rs_output);
+        if (is_array($sp_params)) {
+            $strsql .= '\'' . implode($sp_params, '\', \'') . '\'';
+        }
 
-		/*echo $strsql;*/
-		echo pg_last_error($this->link);
-		$this->desconectar();
+        $strsql .= ')';
 
-		return $result;
-	}
+        $this->conectar();
 
-	function exec_sp_one_value($sp_name, $sp_params, $sp_defaultvalue = "")
-	{
-		$onevalue = 0;
-		$strsql = 'SELECT * FROM '.$sp_name.' (';
+        $rs_output = pg_query($this->link, $strsql);
+        $result = $this->obtener_filas($rs_output);
+        $this->stmt = $rs_output;
+        pg_free_result($rs_output);
 
-		if (is_array($sp_params))
-			$strsql .= '\'' . implode($sp_params, '\', \'') . '\'';
-		else
-			$strsql .= '\'' .$sp_params . '\'';
+        /*echo $strsql;*/
+        echo pg_last_error($this->link);
+        $this->desconectar();
 
-		$strsql .= ') AS valor';
+        return $result;
+    }
 
-		$this->conectar();
-		
-		$rs_output = pg_query($this->link, $strsql);
-		$result = $this->obtener_filas($rs_output);
-		$this->stmt = $rs_output;
-		pg_free_result($rs_output);
+    function exec_sp_one_value($sp_name, $sp_params, $sp_defaultvalue = "")
+    {
+        $onevalue = 0;
+        $strsql = 'SELECT * FROM ' . $sp_name . ' (';
 
-		echo pg_last_error($this->link);
-		$this->desconectar();
+        if (is_array($sp_params)) {
+            $strsql .= '\'' . implode($sp_params, '\', \'') . '\'';
+        } else {
+            $strsql .= '\'' . $sp_params . '\'';
+        }
 
-		$countresult = count($result);
-		if ($countresult > 0)
-			$onevalue = $result[0]['valor'];
-		else
-			$onevalue = $sp_defaultvalue;
-		return $onevalue;
-	}
+        $strsql .= ') AS valor';
 
-	public function exec_sp_iud($sp_name, $sp_params)
-	{
-		$strsql = 'SELECT * FROM '.$sp_name.' (';
+        $this->conectar();
 
-		if (is_array($sp_params))
-			$strsql .= '\'' . implode($sp_params, '\', \'') . '\'';
-		else
-			$strsql .= '\'' .$sp_params . '\'';
+        $rs_output = pg_query($this->link, $strsql);
+        $result = $this->obtener_filas($rs_output);
+        $this->stmt = $rs_output;
+        pg_free_result($rs_output);
 
-		$strsql .= ')';
+        echo pg_last_error($this->link);
+        $this->desconectar();
 
-		$this->conectar();
-		
-		$rs_output = pg_query($this->link, $strsql);
-		$result = $this->obtener_filas($rs_output);
-		$this->stmt = $rs_output;
-		pg_free_result($rs_output);
+        $countresult = count($result);
+        if ($countresult > 0) {
+            $onevalue = $result[0]['valor'];
+        } else {
+            $onevalue = $sp_defaultvalue;
+        }
+        return $onevalue;
+    }
 
-		/*echo $strsql;*/
-		echo pg_last_error($this->link);
-		$this->desconectar();
+    public function exec_sp_iud($sp_name, $sp_params)
+    {
+        $strsql = 'SELECT * FROM ' . $sp_name . ' (';
 
-		return $result;
-	}
+        if (is_array($sp_params)) {
+            $strsql .= '\'' . implode($sp_params, '\', \'') . '\'';
+        } else {
+            $strsql .= '\'' . $sp_params . '\'';
+        }
 
-	function set_select($campos, $tabla, $condicion = false, $orden = ""){
-		$strsql='';
-		if (is_array($campos)){
-		$strsql = '' . implode($campos, ' ,') . '';
-		}else{
-		$strsql=$campos;
-		}
-		$condicion = ($condicion) ? ' WHERE ' . $condicion : '';
-		$query = 'SELECT ' . $campos . ' FROM ' . $tabla . '' . $condicion . $orden;
+        $strsql .= ')';
 
-       $this->conectar();
-       $rs_output = pg_query($this->link, $query);
-       if ( ! $rs_output ){
-            if( empty($this->error) ){
-                $this->error = 'PostgreSQL says: '.@pg_errormessage();
+        $this->conectar();
+
+        $rs_output = pg_query($this->link, $strsql);
+        $result = $this->obtener_filas($rs_output);
+        $this->stmt = $rs_output;
+        pg_free_result($rs_output);
+
+        /*echo $strsql;*/
+        echo pg_last_error($this->link);
+        $this->desconectar();
+
+        return $result;
+    }
+
+    function set_select($campos, $tabla, $condicion = false, $orden = "")
+    {
+        $strsql = '';
+        if (is_array($campos)) {
+            $strsql = '' . implode($campos, ' ,') . '';
+        } else {
+            $strsql = $campos;
+        }
+        $condicion = ($condicion) ? ' WHERE ' . $condicion : '';
+        $query = 'SELECT ' . $campos . ' FROM ' . $tabla . '' . $condicion . $orden;
+
+        $this->conectar();
+        $rs_output = pg_query($this->link, $query);
+        if (!$rs_output) {
+            if (empty($this->error)) {
+                $this->error = 'PostgreSQL says: ' . @pg_errormessage();
                 return $this->error;
             }
         }
@@ -191,4 +198,5 @@ class Db {
         return $result;
     }
 }
+
 ?>
