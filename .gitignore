@@ -14,3 +14,6 @@ media/xls/
 .idea/dataSources/b34d30d5-4720-48a7-8163-ee1a4860a84a/
 .idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml
 .idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/
+/logs/
+adata/.well-known/
+logs/
