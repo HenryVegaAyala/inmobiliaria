@@ -386,10 +386,8 @@ if ($_POST) {
                 }
             }
 
-            $rowConsumo = $objFacturacion->ListarPropiedadConsumo('3', $hdIdProyecto, $ddlAnho, $ddlMes,
-                $hdIdPropiedad);
+            $rowConsumo = $objFacturacion->ListarPropiedadConsumo('3', $hdIdProyecto, $ddlAnho, $ddlMes, $hdIdPropiedad);
             $countConsumo = count($rowConsumo);
-
 
             $rowConsumoBarra = $objFacturacion->ConsumoBarras($hdIdPropiedad, $ddlAnho, $ddlMes);
             $countConsumoBarra = count($rowConsumoBarra);
@@ -397,9 +395,7 @@ if ($_POST) {
             $rowConsumoBarraMax = $objFacturacion->ConsumoMinMax($hdIdPropiedad, $ddlAnho, $ddlMes);
             $countConsumoBarraMax = count($rowConsumoBarraMax);
 
-
             $CodigoPropiedad = '';
-
             $estilo_content = '<link rel="stylesheet" type="text/css" href="http://cinadsacenter.com/dist/css/estilos-factura.css" />';
 
             if ($countPropietario > 0) {
@@ -459,10 +455,8 @@ if ($_POST) {
             // echo $ddlAnho . '<br />';
             // echo $consumo_maximo . '<br />';
 
-
             $consumo_barra = '';
             $valor_consumo_barra = 0;
-
             if ($countConsumoBarra > 0) {
                 //
 
@@ -492,11 +486,8 @@ if ($_POST) {
                 }
 
             }
-
             $saldoAnterior = $objCobranza->SaldoAnteriorPropietario($hdIdPropietario, $ddlAnho, $ddlMes);
-
             $strdetalleConcepto .= '<tr><td class="text-left" width="85%"><strong>SALDO ANTERIOR</strong></td><td align="right" width="15%"><strong>0</strong></td></tr>';
-
             $heightrow = '';
             $alto_fila = 20;
             $altodetalle = 345;
@@ -514,11 +505,8 @@ if ($_POST) {
             }
 
             $contenido = file_get_contents('../../media/templates/factura.html');
-
             $content = str_replace('[nombreproyecto]', $rowProyecto[0]['nombreproyecto'], $contenido);
-            $content = str_replace('[logoproyecto]',
-                ($rowProyecto[0]['logo'] == 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $rowProyecto[0]['logo']),
-                $content);
+            $content = str_replace('[logoproyecto]', ($rowProyecto[0]['logo'] == 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $rowProyecto[0]['logo']), $content);
             $content = str_replace('[direccionproyecto]', $rowProyecto[0]['direccionproyecto'], $content);
             $content = str_replace('[propietario/inquilino]', $strdetallePropietario, $content);
             $content = str_replace('[anho]', $ddlAnho, $content);
@@ -539,8 +527,7 @@ if ($_POST) {
             $content = str_replace('[fechafin_lectura]', $fechafin_lectura, $content);
             $content = str_replace('[detalleconcepto]', $strdetalleConcepto, $content);
             $content = str_replace('[simbolomoneda]', $txtSimboloMoneda, $content);
-            $content = str_replace('[importetotal]', number_format(RedondeoMagico($txtTotalImporte), 2, '.', ''),
-                $content);
+            $content = str_replace('[importetotal]', number_format(RedondeoMagico($txtTotalImporte), 2, '.', ''), $content);
             $content = str_replace('[fechaemision]', fecha_normal($txtFechaEmision), $content);
             $content = str_replace('[fechavencimiento]', fecha_normal($txtFechaVencimiento), $content);
             $content = str_replace('[fechatope]', fecha_normal($txtFechaTope), $content);
@@ -561,8 +548,7 @@ if ($_POST) {
             $content = str_replace('[aviso]', $aviso, $content);
 
             $fileFactura = $folderPDF . $hdIdFacturacion . '.pdf';
-
-            require('../../common/tcpdf/tcpdf.php');
+            require '../../common/tcpdf/tcpdf.php';
 
             if ($tipoGen == 'EMAIL') {
                 $tamanho = 'A4';
@@ -706,16 +692,16 @@ if ($_POST) {
                 $contenidomsje = 'La operación se completó satisfatoriamente';
             }
         } elseif (isset($_POST['btnExportar'])) {
-            include("../../common/pdfconcat.php");
+            include '../../common/pdfconcat.php';
 
             $arrayFilesPDF = array();
             $rep = glob($_SERVER['DOCUMENT_ROOT'] . $folderPDF . '*');
 
             foreach ($rep as $file) {
-                if ($file != '..' && $file != '.' && $file != '') {
+                if ($file !== '..' && $file !== '.' && $file !== '') {
                     $fileinfo = pathinfo($file);
 
-                    array_push($arrayFilesPDF, $_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF . $fileinfo['basename']);
+                    $arrayFilesPDF[] = $_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF . $fileinfo['basename'];
                 }
             }
             clearstatcache();
@@ -747,7 +733,9 @@ if ($_POST) {
             $titulomsje = 'Generado correctamente';
             $contenidomsje = $folderPDF . $filePDf . '.pdf';
         }
-    } elseif (isset($_POST['btnExportarPropiedad']) || isset($_POST['btnExportarPropiedad_Concepto']) || isset($_POST['btnExportarFacturasExcel']) || isset($_POST['btnExportarTotalesFacturaExcel'])) {
+    }
+
+    elseif (isset($_POST['btnExportarPropiedad']) || isset($_POST['btnExportarPropiedad_Concepto']) || isset($_POST['btnExportarFacturasExcel']) || isset($_POST['btnExportarTotalesFacturaExcel'])) {
         require('../../common/PHPExcel.php');
         require('../../common/PHPExcel/Writer/Excel2007.php');
 
@@ -930,7 +918,8 @@ if ($_POST) {
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
         // Write the Excel file to filename some_excel_file.xlsx in the current directory
         $objWriter->save($nameFileExport);
-    } elseif (isset($_POST['btnSubirDatos'])) {
+    }
+    elseif (isset($_POST['btnSubirDatos'])) {
         if (!empty($_FILES['archivo']['name'])) {
             $hdTipoImportacion = (isset($_POST['hdTipoImportacion'])) ? $_POST['hdTipoImportacion'] : '0';
             $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
