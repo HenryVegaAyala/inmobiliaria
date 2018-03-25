@@ -227,20 +227,27 @@ if ($_POST) {
         $rpta = $objFacturacion->EliminarStepByStep($hdIdFacturacion, $idusuario, $rpta, $titulomsje, $contenidomsje);
     }
     elseif (isset($_POST['btnGenerarPDF']) || isset($_POST['btnExportar'])) {
-        $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
-        $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '2015';
-        $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '1';
+        $hdIdProyecto = isset($_POST['hdIdProyecto']) ? $_POST['hdIdProyecto'] : '0';
+        $ddlAnho = isset($_POST['ddlAnho']) ? $_POST['ddlAnho'] : '2015';
+        $ddlMes = isset($_POST['ddlMes']) ? $_POST['ddlMes'] : '1';
         $directorioServer = '';
 
-        if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')) {
+        if (($_SERVER['SERVER_NAME'] === 'localhost') || ($_SERVER['SERVER_NAME'] === '127.0.0.1')) {
             $directorioServer = 'cinadsacv2';
         } else {
             $directorioServer = 'http://cinadsacenter.com';
         }
 
+
         $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
         $folderPDF = $directorioServer . '/media/pdf/' . $filePDf . '/';
 
+        /**Elimina la carpeta*/
+        if (file_exists($folderPDF)) {
+            unlink($folderPDF);
+        }
+
+        /**Crea la carpeta de files**/
         if (!is_dir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF)) {
             mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF, 0777,true);
         }
@@ -345,6 +352,12 @@ if ($_POST) {
             $rowProyecto = $objProyecto->ProyectoFacturar('1', $hdIdProyecto);
             $countProyecto = count($rowProyecto);
 
+            /**************************************************************************************/
+//            $fp = fopen($_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log', 'w');
+//            fwrite($fp, json_encode('Numero de proyectos: ' . $countProyecto) . "\n");
+//            fclose($fp);
+            /**************************************************************************************/
+
             $rowConcepto = $objFacturacion->ListarConceptoFacturacion('1', $hdIdFacturacion);
             $countConcepto = count($rowConcepto);
 
@@ -365,18 +378,15 @@ if ($_POST) {
             if ($countPropiedadDPT > 0) {
                 // echo $rowPropiedadDPT[0]['tm_idtipopropiedad'];
                 if ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'DPT') {
-                    $rowPropiedadEST = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto,
-                        $hdIdPropiedad, 'EST');
-                    $rowPropiedadDEP = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto,
-                        $hdIdPropiedad, 'DEP');
-
+                    $rowPropiedadEST = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto, $hdIdPropiedad, 'EST');
+                    $rowPropiedadDEP = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto, $hdIdPropiedad, 'DEP');
                     $countPropiedadEST = count($rowPropiedadEST);
                     $countPropiedadDEP = count($rowPropiedadDEP);
                 } else {
-                    if ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'EST') {
+                    if ($rowPropiedadDPT[0]['tm_idtipopropiedad'] === 'EST') {
                         $rowPropiedadEST = $objPropiedad->ListarSimpleId($hdIdPropiedad);
                         $countPropiedadEST = count($rowPropiedadEST);
-                    } elseif ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'DEP') {
+                    } elseif ($rowPropiedadDPT[0]['tm_idtipopropiedad'] === 'DEP') {
                         $rowPropiedadDEP = $objPropiedad->ListarSimpleId($hdIdPropiedad);
                         $countPropiedadDEP = count($rowPropiedadDEP);
                     }
@@ -407,7 +417,6 @@ if ($_POST) {
 
             if ($countPropiedadDPT > 0) {
                 $CodigoPropiedad = $rowPropiedadDPT[0]['tm_descripcionpropiedad'];
-
                 for ($counterPropiedadDPT = 0; $counterPropiedadDPT < $countPropiedadDPT; $counterPropiedadDPT++) {
                     if (strlen($strdetallePropiedadDPT) > 0) {
                         $strdetallePropiedadDPT .= '-';
@@ -458,20 +467,13 @@ if ($_POST) {
             $consumo_barra = '';
             $valor_consumo_barra = 0;
             if ($countConsumoBarra > 0) {
-                //
-
                 for ($counterConsumoBarra = 0; $counterConsumoBarra < $countConsumoBarra; $counterConsumoBarra++) {
-
-
                     if ($consumo_maximo > 0) {
                         $valor_consumo_barra = $rowConsumoBarra[$counterConsumoBarra]['consumo'];
                         // $valor_consumo_barra = $valor_consumo_barra < 1 ? 1 : $valor_consumo_barra;
-
                         $porcj_valor_consumo_barra = (100 * $valor_consumo_barra) / $consumo_maximo;
-
                         $ancho_barra_blanca = 100 - $porcj_valor_consumo_barra;
                         $porcj_valor_consumo_barra = $porcj_valor_consumo_barra < 1 ? 1 : $porcj_valor_consumo_barra;
-
                         $ancho_barra_blanca = $ancho_barra_blanca < 1 ? 1 : $ancho_barra_blanca;
                     } else {
                         $porcj_valor_consumo_barra = 1;
@@ -479,12 +481,10 @@ if ($_POST) {
                     }
 
                     $consumo_barra .= '<tr height="10px"><td height="10px"><strong>' . $rowConsumoBarra[$counterConsumoBarra]['mes'] . '</strong></td><td><table width="100%"><tr><td class="barra_azul" width="' . $porcj_valor_consumo_barra . '%"></td><td width="' . $ancho_barra_blanca . '%"></td></tr></table></td></tr>';
-
                     // echo 'valor_consumo_barra = ' . $valor_consumo_barra . '<br />';
                     // echo 'porcj_valor_consumo_barra = ' . $porcj_valor_consumo_barra . '<br />';
                     // echo 'ancho_barra_blanca = ' . $ancho_barra_blanca . '<br />';
                 }
-
             }
             $saldoAnterior = $objCobranza->SaldoAnteriorPropietario($hdIdPropietario, $ddlAnho, $ddlMes);
             $strdetalleConcepto .= '<tr><td class="text-left" width="85%"><strong>SALDO ANTERIOR</strong></td><td align="right" width="15%"><strong>0</strong></td></tr>';
@@ -494,8 +494,7 @@ if ($_POST) {
             $altoConceptos = $countConcepto * $alto_fila;
 
             for ($counterConcepto = 0; $counterConcepto < $countConcepto; $counterConcepto++) {
-
-                if ($counterConcepto == ($countConcepto - 1)) {
+                if ($counterConcepto === ($countConcepto - 1)) {
                     if ($countConcepto <= 23) {
                         $heightrow = ' height="' . ($altodetalle - $altoConceptos) . 'px"';
                     }
@@ -503,7 +502,6 @@ if ($_POST) {
 
                 $strdetalleConcepto .= '<tr><td class="text-left"' . $heightrow . '><strong>' . $rowConcepto[$counterConcepto]['nombreconcepto'] . '</strong></td><td align="right"><strong>' . $rowConcepto[$counterConcepto]['td_valorconcepto'] . '</strong></td></tr>';
             }
-
             $contenido = file_get_contents('../../media/templates/factura.html');
             $content = str_replace('[nombreproyecto]', $rowProyecto[0]['nombreproyecto'], $contenido);
             $content = str_replace('[logoproyecto]', ($rowProyecto[0]['logo'] == 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $rowProyecto[0]['logo']), $content);
@@ -538,8 +536,7 @@ if ($_POST) {
             $content = str_replace('[emailpago]', $rowProyecto[0]['emailpago'], $content);
 
             $aviso = '';
-
-            if ($hdIdProyecto == 'CD00000011') {
+            if ($hdIdProyecto === 'CD00000011') {
                 $aviso = '1). Se les pide indicar siempre la REFERENCIA en ventanilla. 2). Se cobrara mora de un s/.1.00 diario después de la fecha de vencimiento. 3). A partir del día 07 de no haber cancelado,  se publicará como moroso. 4). Realice sus pagos a tiempo EVITE EL CORTE DE AGUA HASTA EL DIA 05. 5). Recuerde que estar al día en los mantenimientos ayuda a una mejor gestión. LA JUNTA DE PROPIETARIOS';
             } else {
                 $aviso = '1). Después de haber cancelado presentar su voucher en administración, portería o enviar por correo: ' . $rowProyecto[0]['emailpago'] . '. 2). En caso de no haber cancelado o acreditado su pago dentro de la fecha, será publicado como moroso 3).';
@@ -547,10 +544,16 @@ if ($_POST) {
 
             $content = str_replace('[aviso]', $aviso, $content);
 
+            /**************************************************************************************/
+//            $fp = fopen($_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log', 'w');
+//            fwrite($fp, json_encode('Contenido de cada factura: ' . $content) . "\n");
+//            fclose($fp);
+            /**************************************************************************************/
+
             $fileFactura = $folderPDF . $hdIdFacturacion . '.pdf';
             require '../../common/tcpdf/tcpdf.php';
 
-            if ($tipoGen == 'EMAIL') {
+            if ($tipoGen === 'EMAIL') {
                 $tamanho = 'A4';
                 $orientacion = 'P';
             } else {
@@ -571,16 +574,23 @@ if ($_POST) {
             }
 
             $contentHTML = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            ' . $estilo_content . '
-        </head>
-        <body>' . $content . '</body>
-        </html>';
+            <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                ' . $estilo_content . '
+            </head>
+            <body>' . $content . '</body>
+            </html>';
 
+//            /**************************************************************************************/
+//            $fp = fopen($_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log', 'w');
+//            fwrite($fp, json_encode('ID Proyecto: ' . $hdIdProyecto . $ddlAnho . $ddlMes) . "\n");
+//            fclose($fp);
+//            /**************************************************************************************/
+
+            /**Aqui exporta en cada llamada un PDF**/
             $fileAccess = $hdIdProyecto . $ddlAnho . $ddlMes;
-            $fileFactura = $_SERVER['DOCUMENT_ROOT'] . '/media/pdf/' . $fileAccess . '/' . $fileAccess . '.pdf';
+            $fileFactura = $_SERVER['DOCUMENT_ROOT'] . '/media/pdf/' . $fileAccess . '/' . $fileAccess. '-'.md5( date('d.m.Y H:i:s')). '.pdf';
             $pdf = new TCPDF($orientacion, PDF_UNIT, $tamanho, true, 'UTF-8', false);
             $pdf->SetCreator(PDF_CREATOR);
             $pdf->SetMargins(PDF_MARGIN_LEFT, 6, PDF_MARGIN_RIGHT, true);
@@ -591,16 +601,16 @@ if ($_POST) {
             $pdf->writeHTML($contentHTML, true, false, true, false, '');
             $pdf->lastPage();
             $pdf->Output($fileFactura, 'F');
+
             //$pdf->Output($_SERVER['DOCUMENT_ROOT'] . '/media/pdf/'.$hdIdProyecto.$ddlAnho.$ddlMes.'.pdf', 'F');
 
-            if ($tipoGen == 'EMAIL') {
+            if ($tipoGen === 'EMAIL') {
                 //$para = 'ismael.limo@gmail.com';
-
                 $destinatario = $rowPropietario[0]['tm_email'];
                 // $destinatario = 'ismael.limo@gmail.com;cobranzas@cinadsac.pe';
 
                 if (!empty($destinatario)) {
-                    if ($destinatario != '') {
+                    if ($destinatario !== '') {
                         $de = trim(strip_tags($de));
 
                         require '../../bussiness/modelocarta.php';
@@ -608,9 +618,7 @@ if ($_POST) {
                         require '../../common/PHPMailerAutoload.php';
 
                         $mail = new PHPMailer();
-
                         $mail->isSMTP();
-
                         $mail->Host = $email_Host;
                         $mail->SMTPAuth = true;
                         $mail->Host = $email_Host;
@@ -626,7 +634,6 @@ if ($_POST) {
                         // $mail->Username = 'info@inmobili.net';
                         // $mail->Password = 'Admin2016';
                         // $mail->SMTPSecure = 'tls';
-
                         $mail->setFrom($de);
 
                         // for ($counterPropietario=0; $counterPropietario < $countPropietario; $counterPropietario++) {
@@ -634,7 +641,6 @@ if ($_POST) {
 
                         foreach ($listPara as $para) {
                             $para = trim(strip_tags($para));
-
                             if (preg_match($pattern, $para)) {
                                 if (validar_email($para)) {
                                     $mail->addAddress($para);
@@ -652,13 +658,11 @@ if ($_POST) {
 
                         if ($countModelo > 0) {
                             $modeloMensaje = $rowModelo[0]['contenido'];
-
                             $modeloMensaje = str_replace(':Propiedad:', $strdetallePropiedadDPT, $modeloMensaje);
                             $modeloMensaje = str_replace(':ApeNom:', $strdetallePropietario, $modeloMensaje);
                             $modeloMensaje = str_replace(':FechaHoy:', date('d/m/Y'), $modeloMensaje);
                             $modeloMensaje = str_replace(':MesProyecto:', $meses[$ddlMes - 1], $modeloMensaje);
-                            $modeloMensaje = str_replace(':FechaEmision:', fecha_normal($txtFechaEmision),
-                                $modeloMensaje);
+                            $modeloMensaje = str_replace(':FechaEmision:', fecha_normal($txtFechaEmision), $modeloMensaje);
                         } else {
                             $modeloMensaje = 'Estimado propietario/inquilino: ' . $strdetallePropietario . ', \neste documento se está enviando para informarle de la facturación del mes indicado en el asunto.\nAtentamente, CINADSAC.';
                         }
@@ -691,24 +695,66 @@ if ($_POST) {
                 $titulomsje = 'Generado correctamente';
                 $contenidomsje = 'La operación se completó satisfatoriamente';
             }
-        } elseif (isset($_POST['btnExportar'])) {
+
+            /**************************************************************************************/
+            $url_file = $_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log';
+            $text ='Termina el proceso de generar'. "\n";
+            file_put_contents($url_file, $text, FILE_APPEND | LOCK_EX);
+            /**************************************************************************************/
+        }
+        elseif (isset($_POST['btnExportar'])) {
             include '../../common/pdfconcat.php';
 
-            $arrayFilesPDF = array();
-            $rep = glob($_SERVER['DOCUMENT_ROOT'] . $folderPDF . '*');
+            $arrayFilesPDF = [];
+
+/**Suspendemos estas linea por motivo que no funciona**/
+/************************************************************************************************************************/
+            /**************************************************************************************/
+            $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
+            $folderPDFS = $_SERVER['DOCUMENT_ROOT'] . '/media/pdf/' . $filePDf . '/';
+
+            $url_file = $_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log';
+            $text ='URL BASE'. "\n";
+            $text .=json_encode($folderPDFS . '*'). "\n";
+            file_put_contents($url_file, $text, FILE_APPEND | LOCK_EX);
+            /**************************************************************************************/
+
+            $rep = glob($folderPDFS . '*');
+
+            /**************************************************************************************/
+            $url_file = $_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log';
+            $text = 'List de files Array' . "\n";
+            $text .= json_encode($rep). "\n";
+            file_put_contents($url_file, $text, FILE_APPEND | LOCK_EX);
+            /**************************************************************************************/
 
             foreach ($rep as $file) {
                 if ($file !== '..' && $file !== '.' && $file !== '') {
                     $fileinfo = pathinfo($file);
+                    /**************************************************************************************/
+                    $url_file = $_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log';
+                    $text = 'Files de PDF'. "\n";
+                    $text .= json_encode($folderPDFS . $fileinfo['basename']). "\n";
+                    file_put_contents($url_file, $text, FILE_APPEND | LOCK_EX);
+                    /**************************************************************************************/
 
-                    $arrayFilesPDF[] = $_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF . $fileinfo['basename'];
+                    $arrayFilesPDF[] = $folderPDFS . $fileinfo['basename'];
                 }
             }
+/************************************************************************************************************************/
             clearstatcache();
 
-            if (file_exists('../../media/pdf/' . $hdIdProyecto . $ddlAnho . $ddlMes . '.pdf')) {
-                unlink('../../media/pdf/' . $hdIdProyecto . $ddlAnho . $ddlMes . '.pdf');
+            if (($_SERVER['SERVER_NAME'] === 'localhost') || ($_SERVER['SERVER_NAME'] === '127.0.0.1')) {
+                $directorioServer = 'cinadsacv2';
+            } else {
+                $directorioServer = 'http://cinadsacenter.com';
             }
+
+            $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
+            $folderPDF = $directorioServer . '/media/pdf/' . $filePDf . '/';
+
+            $fileAccess = $hdIdProyecto . $ddlAnho . $ddlMes;
+            $fileFactura = $_SERVER['DOCUMENT_ROOT'] . '/media/pdf/' . $fileAccess . '/' . $fileAccess . '.pdf';
 
             $pdf = new concat_pdf();
             $pdf->SetCreator(PDF_CREATOR);
@@ -717,17 +763,16 @@ if ($_POST) {
             $pdf->setPrintFooter(false);
             $pdf->SetCellPadding(0);
             $pdf->setFiles($arrayFilesPDF);
-//            $pdf->concat();
-//            $pdf->Output($directorioServer . '/media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf', 'F');
 
-            if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')) {
-                $directorioServer = 'cinadsacv2';
-            } else {
-                $directorioServer = 'http://cinadsacenter.com';
-            }
+            /**************************************************************************************/
+            $url_file = $_SERVER['DOCUMENT_ROOT'] . 'logs/cinadsacenter.log';
+            $text = 'Array de PDF'. "\n";
+            $text .= json_encode($arrayFilesPDF). "\n";
+            file_put_contents($url_file, $text, FILE_APPEND | LOCK_EX);
+            /**************************************************************************************/
 
-            $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
-            $folderPDF = $directorioServer . '/media/pdf/' . $filePDf . '/';
+            $pdf->concat();
+            $pdf->Output($fileFactura,'F');
 
             $rpta = '1';
             $titulomsje = 'Generado correctamente';
