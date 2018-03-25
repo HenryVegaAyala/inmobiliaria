@@ -559,6 +559,8 @@ if ($_POST){
         <body>' . $content . '</body>
         </html>';
 
+            $fileAccess = $hdIdProyecto . $ddlAnho . $ddlMes;
+            $fileFactura = $_SERVER['DOCUMENT_ROOT'] . '/media/pdf/' . $fileAccess . '/' . $fileAccess . '.pdf';
             $pdf = new TCPDF($orientacion, PDF_UNIT, $tamanho, true, 'UTF-8', false);
             $pdf->SetCreator(PDF_CREATOR);
             $pdf->SetMargins(PDF_MARGIN_LEFT, 6, PDF_MARGIN_RIGHT, true);
@@ -698,8 +700,8 @@ if ($_POST){
             $pdf->setPrintFooter(false);
             $pdf->SetCellPadding(0);
             $pdf->setFiles($arrayFilesPDF);
-            $pdf->concat();
-            $pdf->Output($directorioServer . '/media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf', 'F');
+//            $pdf->concat();
+//            $pdf->Output($directorioServer . '/media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf', 'F');
 
             $rpta = '1';
             $titulomsje = 'Generado correctamente';

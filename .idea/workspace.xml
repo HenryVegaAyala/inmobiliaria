@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="546bd59a-d346-46bd-b2b0-01c629ebb62d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ/schema/public.abK9xQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/inmobiliaria.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" afterPath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,27 +34,29 @@
       <file leaf-file-name="facturacion-post.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="285" column="37" lean-forward="false" selection-start-line="285" selection-start-column="37" selection-end-line="285" selection-end-column="37" />
+            <state relative-caret-position="198">
+              <caret line="571" column="29" lean-forward="true" selection-start-line="571" selection-start-column="29" selection-end-line="571" selection-end-column="29" />
               <folding>
-                <element signature="e#908#54531#0#PHP" expanded="false" />
-                <element signature="e#1984#2416#0#PHP" expanded="false" />
-                <element signature="e#2421#3348#0#PHP" expanded="false" />
-                <element signature="e#3353#3824#0#PHP" expanded="false" />
-                <element signature="e#3829#5224#0#PHP" expanded="false" />
-                <element signature="e#5229#6514#0#PHP" expanded="false" />
-                <element signature="e#6519#8514#0#PHP" expanded="false" />
-                <element signature="e#8519#9155#0#PHP" expanded="false" />
-                <element signature="e#9160#9850#0#PHP" expanded="false" />
-                <element signature="e#9855#10832#0#PHP" expanded="false" />
-                <element signature="e#10837#11360#0#PHP" expanded="false" />
-                <element signature="e#37481#47956#0#PHP" expanded="false" />
-                <element signature="e#47961#54531#0#PHP" expanded="false" />
-                <marker date="1521941506767" expanded="true" signature="29487:30006" ph="..." />
-                <marker date="1521941506767" expanded="true" signature="29508:29717" ph="..." />
-                <marker date="1521941506767" expanded="true" signature="29738:29985" ph="..." />
-                <marker date="1521941506767" expanded="true" signature="30229:30456" ph="..." />
-                <marker date="1521941506767" expanded="true" signature="30248:30394" ph="..." />
+                <element signature="e#914#53061#0#PHP" expanded="false" />
+                <element signature="e#1977#2396#0#PHP" expanded="false" />
+                <element signature="e#2401#3315#0#PHP" expanded="false" />
+                <element signature="e#3320#3791#0#PHP" expanded="false" />
+                <element signature="e#3796#5130#0#PHP" expanded="false" />
+                <element signature="e#5135#6391#0#PHP" expanded="false" />
+                <element signature="e#6396#8326#0#PHP" expanded="false" />
+                <element signature="e#8331#8950#0#PHP" expanded="false" />
+                <element signature="e#8955#9616#0#PHP" expanded="false" />
+                <element signature="e#9621#10565#0#PHP" expanded="false" />
+                <element signature="e#10570#11093#0#PHP" expanded="false" />
+                <element signature="e#13987#15991#0#PHP" expanded="false" />
+                <element signature="e#30594#35463#0#PHP" expanded="false" />
+                <element signature="e#36837#46796#0#PHP" expanded="false" />
+                <element signature="e#46801#53061#0#PHP" expanded="false" />
+                <marker date="1521942159100" expanded="true" signature="28851:29370" ph="..." />
+                <marker date="1521942159100" expanded="true" signature="28872:29081" ph="..." />
+                <marker date="1521942159100" expanded="true" signature="29102:29349" ph="..." />
+                <marker date="1521942159100" expanded="true" signature="29589:29788" ph="..." />
+                <marker date="1521942159100" expanded="true" signature="29604:29734" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,7 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>libraries-js</find>
       <find>La operaci</find>
       <find>Importe</find>
       <find>titulomsje</find>
@@ -105,6 +95,7 @@
       <find>$objProyecto</find>
       <find>virtual host</find>
       <find>loadModule rew</find>
+      <find>$pdf-&gt;Output</find>
     </findStrings>
     <replaceStrings>
       <replace>inmobiliaria</replace>
@@ -133,10 +124,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/../cinadsacv2/services/facturacion/facturacion-post.php" />
         <option value="$PROJECT_DIR$/bussiness/condominio.php" />
-        <option value="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
         <option value="$PROJECT_DIR$/../cinadsacenter.pe/public_html/index.php" />
         <option value="C:/Windows/System32/drivers/etc/hosts" />
         <option value="$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf" />
+        <option value="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
       </list>
     </option>
   </component>
@@ -245,7 +236,7 @@
       <workItem from="1521690676360" duration="9315000" />
       <workItem from="1521901239677" duration="9773000" />
       <workItem from="1521913404673" duration="8381000" />
-      <workItem from="1521941485483" duration="26000" />
+      <workItem from="1521941485483" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1521437163212</created>
@@ -268,11 +259,25 @@
       <option name="project" value="LOCAL" />
       <updated>1521906916623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="wip">
+      <created>1521941532704</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521941532704</updated>
+    </task>
+    <task id="LOCAL-00005" summary="wip">
+      <created>1521941650494</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521941650494</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47651000" />
+    <option name="totallyTimeSpent" value="48356000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -289,8 +294,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -304,7 +310,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45524693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -516,27 +521,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="285" column="37" lean-forward="false" selection-start-line="285" selection-start-column="37" selection-end-line="285" selection-end-column="37" />
+        <state relative-caret-position="198">
+          <caret line="571" column="29" lean-forward="true" selection-start-line="571" selection-start-column="29" selection-end-line="571" selection-end-column="29" />
           <folding>
-            <element signature="e#908#54531#0#PHP" expanded="false" />
-            <element signature="e#1984#2416#0#PHP" expanded="false" />
-            <element signature="e#2421#3348#0#PHP" expanded="false" />
-            <element signature="e#3353#3824#0#PHP" expanded="false" />
-            <element signature="e#3829#5224#0#PHP" expanded="false" />
-            <element signature="e#5229#6514#0#PHP" expanded="false" />
-            <element signature="e#6519#8514#0#PHP" expanded="false" />
-            <element signature="e#8519#9155#0#PHP" expanded="false" />
-            <element signature="e#9160#9850#0#PHP" expanded="false" />
-            <element signature="e#9855#10832#0#PHP" expanded="false" />
-            <element signature="e#10837#11360#0#PHP" expanded="false" />
-            <element signature="e#37481#47956#0#PHP" expanded="false" />
-            <element signature="e#47961#54531#0#PHP" expanded="false" />
-            <marker date="1521941506767" expanded="true" signature="29487:30006" ph="..." />
-            <marker date="1521941506767" expanded="true" signature="29508:29717" ph="..." />
-            <marker date="1521941506767" expanded="true" signature="29738:29985" ph="..." />
-            <marker date="1521941506767" expanded="true" signature="30229:30456" ph="..." />
-            <marker date="1521941506767" expanded="true" signature="30248:30394" ph="..." />
+            <element signature="e#914#53061#0#PHP" expanded="false" />
+            <element signature="e#1977#2396#0#PHP" expanded="false" />
+            <element signature="e#2401#3315#0#PHP" expanded="false" />
+            <element signature="e#3320#3791#0#PHP" expanded="false" />
+            <element signature="e#3796#5130#0#PHP" expanded="false" />
+            <element signature="e#5135#6391#0#PHP" expanded="false" />
+            <element signature="e#6396#8326#0#PHP" expanded="false" />
+            <element signature="e#8331#8950#0#PHP" expanded="false" />
+            <element signature="e#8955#9616#0#PHP" expanded="false" />
+            <element signature="e#9621#10565#0#PHP" expanded="false" />
+            <element signature="e#10570#11093#0#PHP" expanded="false" />
+            <element signature="e#13987#15991#0#PHP" expanded="false" />
+            <element signature="e#30594#35463#0#PHP" expanded="false" />
+            <element signature="e#36837#46796#0#PHP" expanded="false" />
+            <element signature="e#46801#53061#0#PHP" expanded="false" />
+            <marker date="1521942159100" expanded="true" signature="28851:29370" ph="..." />
+            <marker date="1521942159100" expanded="true" signature="28872:29081" ph="..." />
+            <marker date="1521942159100" expanded="true" signature="29102:29349" ph="..." />
+            <marker date="1521942159100" expanded="true" signature="29589:29788" ph="..." />
+            <marker date="1521942159100" expanded="true" signature="29604:29734" ph="..." />
           </folding>
         </state>
       </provider>
