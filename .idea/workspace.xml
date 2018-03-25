@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="546bd59a-d346-46bd-b2b0-01c629ebb62d" name="Default" comment="wip">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/services/facturacion/error_log" afterPath="$PROJECT_DIR$/services/facturacion/error_log" />
-      <change beforePath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" afterPath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
+    <list default="true" id="546bd59a-d346-46bd-b2b0-01c629ebb62d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ/schema/public.abK9xQ.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/inmobiliaria.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,40 +37,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -70,8 +45,8 @@
       <file leaf-file-name="facturacion-post.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="231" column="44" lean-forward="true" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+            <state relative-caret-position="736">
+              <caret line="285" column="37" lean-forward="false" selection-start-line="285" selection-start-column="37" selection-end-line="285" selection-end-column="37" />
               <folding>
                 <element signature="e#908#54531#0#PHP" expanded="false" />
                 <element signature="e#1984#2416#0#PHP" expanded="false" />
@@ -84,28 +59,14 @@
                 <element signature="e#9160#9850#0#PHP" expanded="false" />
                 <element signature="e#9855#10832#0#PHP" expanded="false" />
                 <element signature="e#10837#11360#0#PHP" expanded="false" />
-                <element signature="e#13848#14184#0#PHP" expanded="false" />
-                <element signature="e#31148#35990#0#PHP" expanded="false" />
-                <element signature="e#35835#35990#0#PHP" expanded="false" />
                 <element signature="e#37481#47956#0#PHP" expanded="false" />
                 <element signature="e#47961#54531#0#PHP" expanded="false" />
-                <element signature="e#48011#54525#0#PHP" expanded="false" />
-                <marker date="1521906204650" expanded="true" signature="29487:30006" ph="..." />
-                <marker date="1521906204650" expanded="true" signature="29508:29717" ph="..." />
-                <marker date="1521906204650" expanded="true" signature="29738:29985" ph="..." />
-                <marker date="1521906204650" expanded="true" signature="30229:30456" ph="..." />
-                <marker date="1521906204650" expanded="true" signature="30248:30394" ph="..." />
+                <marker date="1521941506767" expanded="true" signature="29487:30006" ph="..." />
+                <marker date="1521941506767" expanded="true" signature="29508:29717" ph="..." />
+                <marker date="1521941506767" expanded="true" signature="29738:29985" ph="..." />
+                <marker date="1521941506767" expanded="true" signature="30229:30456" ph="..." />
+                <marker date="1521941506767" expanded="true" signature="30248:30394" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constructora.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/constructora.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3944">
-              <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -114,7 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$pag</find>
       <find>libraries-js</find>
       <find>La operaci</find>
       <find>Importe</find>
@@ -123,9 +83,7 @@
       <find>cinadsacv2</find>
       <find>inmb</find>
       <find>email_Default</find>
-      <find>$email_Default</find>
       <find>inmobiliaria</find>
-      <find>$directorioServer</find>
       <find>media/pdf/</find>
       <find>error_log</find>
       <find>root</find>
@@ -139,9 +97,18 @@
       <find>$folderPDF</find>
       <find>Output</find>
       <find>$contenidomsje</find>
+      <find>$_SERVER['DOCUMENT_ROOT']</find>
+      <find>$directorioServer</find>
+      <find>$detalleLog</find>
+      <find>LOGOBELLOHYCINAD</find>
+      <find>$email_Default</find>
+      <find>$objProyecto</find>
+      <find>virtual host</find>
+      <find>loadModule rew</find>
     </findStrings>
     <replaceStrings>
       <replace>inmobiliaria</replace>
+      <replace>'inmobiliaria'</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp64\www\inmobiliaria\dist\js\app</dir>
@@ -163,8 +130,13 @@
         <option value="$PROJECT_DIR$/services/facturacion/error_log" />
         <option value="$PROJECT_DIR$/error_log" />
         <option value="$PROJECT_DIR$/dist/js/app/process/facturacion-script.js" />
-        <option value="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/../cinadsacv2/services/facturacion/facturacion-post.php" />
+        <option value="$PROJECT_DIR$/bussiness/condominio.php" />
+        <option value="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
+        <option value="$PROJECT_DIR$/../cinadsacenter.pe/public_html/index.php" />
+        <option value="C:/Windows/System32/drivers/etc/hosts" />
+        <option value="$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf" />
       </list>
     </option>
   </component>
@@ -176,10 +148,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="916" />
+    <option name="x" value="-2" />
+    <option name="width" value="1364" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -199,6 +170,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="inmobiliaria" type="cbb8eebc:String" user="inmobiliaria" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -206,51 +188,6 @@
             <path>
               <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="logs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CD0000000220182" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="facturacion" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="inmobiliaria" type="cbb8eebc:String" user="inmobiliaria" />
             </path>
           </expand>
           <select />
@@ -270,6 +207,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cinadsacenter.pe/public_html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -305,7 +243,9 @@
       <workItem from="1521263044848" duration="1509000" />
       <workItem from="1521266977585" duration="117000" />
       <workItem from="1521690676360" duration="9315000" />
-      <workItem from="1521901239677" duration="3434000" />
+      <workItem from="1521901239677" duration="9773000" />
+      <workItem from="1521913404673" duration="8381000" />
+      <workItem from="1521941485483" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1521437163212</created>
@@ -321,13 +261,20 @@
       <option name="project" value="LOCAL" />
       <updated>1521699610468</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="wip">
+      <created>1521906916623</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521906916623</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32905000" />
+    <option name="totallyTimeSpent" value="47651000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -339,25 +286,25 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31240544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45524693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -392,6 +339,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -401,217 +374,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/services/facturacion/facturacion-post.php</url>
-          <line>667</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/pgsql/pgsql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db-OneConnect.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="91" column="20" lean-forward="false" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acceso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbSrc:///6e98fd85/b34d30d5-4720-48a7-8163-ee1a4860a84a/database/cinadsac_inmobiliaria/schema/public/routine/pa_usuario_login@(varchar,varchar).sql" />
-    <entry file="das://src:table:/6e98fd85/b34d30d5-4720-48a7-8163-ee1a4860a84a/cinadsac_inmobiliaria.public.tm_usuario" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b34d30d5-4720-48a7-8163-ee1a4860a84a/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/usuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acceso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error_log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db-OneConnect.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinadsacv2.sublime-workspace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12359">
-          <caret line="727" column="41" lean-forward="false" selection-start-line="727" selection-start-column="41" selection-end-line="727" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acceso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="26" lean-forward="false" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/libraries-js.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/change-owner-reports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acceso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db-OneConnect.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinadsacv2.sublime-workspace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12359">
-          <caret line="727" column="41" lean-forward="false" selection-start-line="727" selection-start-column="41" selection-end-line="727" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acceso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="26" lean-forward="false" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/libraries-js.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/change-owner-reports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.720/dump.sql">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="327">
-          <caret line="19285" column="86" lean-forward="false" selection-start-line="19285" selection-start-column="86" selection-end-line="19285" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/error_log" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db-OneConnect.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/cinadsacv2.sublime-workspace" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/libraries-js.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/index.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/header.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/change-owner-reports.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db-OneConnect.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/cinadsacv2.sublime-workspace" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/libraries-js.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/index.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/header.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/change-owner-reports.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.720/dump.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/882a8708-3734-40f5-825a-f11633a7d767/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -655,106 +442,82 @@
       </provider>
     </entry>
     <entry file="dbSrc:///6e98fd85/e11dab4b-3a81-4924-9059-1df2a9424427/database/cinadsac_inmobiliaria/schema/public/routine/pa_bancos_registrar@(varchar,varchar,varchar,integer).sql" />
-    <entry file="file://$PROJECT_DIR$/services/modelocarta/modelocarta-post.php">
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/modelocarta/modelocarta-post.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/sesion.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/logout.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/reporteria/reporteador-post.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/bussiness/facturacion.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/error_log" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/class.phpmailer.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/facturacion/error_log" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/dist/js/app/admin/constructora-script.min.js" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/dist/js/app/process/facturacion-script.js" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/views/admin/constructora.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db.class.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/tcpdf/tcpdf.php" />
+    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/facturacion/facturacion-post.php" />
+    <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/sesion.class.php">
+    <entry file="file://$PROJECT_DIR$/bussiness/condominio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="207">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
+    <entry file="file://$PROJECT_DIR$/../cinadsacenter.pe/public_html/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="17">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/reporteria/reporteador-post.php">
+    <entry file="file://$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/httpd.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="535">
+          <caret line="189" column="28" lean-forward="false" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/facturacion.php">
+    <entry file="file://$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/extra/httpd-default.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="-754">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
+    <entry file="file://$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="419">
+          <caret line="39" column="62" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/error_log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-785">
-          <caret line="13" column="88" lean-forward="false" selection-start-line="13" selection-start-column="88" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/class.phpmailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="635" column="16" lean-forward="false" selection-start-line="635" selection-start-column="16" selection-end-line="635" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/facturacion/error_log">
+    <entry file="file://$USER_HOME$/Desktop/hosts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/app/admin/constructora-script.min.js">
+    <entry file="file://C:/Windows/System32/drivers/etc/hosts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8008" lean-forward="false" selection-start-line="0" selection-start-column="8008" selection-end-line="0" selection-end-column="8008" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/app/process/facturacion-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="660" column="0" lean-forward="true" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/constructora.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3944">
-          <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="493">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="231" column="44" lean-forward="true" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+        <state relative-caret-position="736">
+          <caret line="285" column="37" lean-forward="false" selection-start-line="285" selection-start-column="37" selection-end-line="285" selection-end-column="37" />
           <folding>
             <element signature="e#908#54531#0#PHP" expanded="false" />
             <element signature="e#1984#2416#0#PHP" expanded="false" />
@@ -767,17 +530,13 @@
             <element signature="e#9160#9850#0#PHP" expanded="false" />
             <element signature="e#9855#10832#0#PHP" expanded="false" />
             <element signature="e#10837#11360#0#PHP" expanded="false" />
-            <element signature="e#13848#14184#0#PHP" expanded="false" />
-            <element signature="e#31148#35990#0#PHP" expanded="false" />
-            <element signature="e#35835#35990#0#PHP" expanded="false" />
             <element signature="e#37481#47956#0#PHP" expanded="false" />
             <element signature="e#47961#54531#0#PHP" expanded="false" />
-            <element signature="e#48011#54525#0#PHP" expanded="false" />
-            <marker date="1521906204650" expanded="true" signature="29487:30006" ph="..." />
-            <marker date="1521906204650" expanded="true" signature="29508:29717" ph="..." />
-            <marker date="1521906204650" expanded="true" signature="29738:29985" ph="..." />
-            <marker date="1521906204650" expanded="true" signature="30229:30456" ph="..." />
-            <marker date="1521906204650" expanded="true" signature="30248:30394" ph="..." />
+            <marker date="1521941506767" expanded="true" signature="29487:30006" ph="..." />
+            <marker date="1521941506767" expanded="true" signature="29508:29717" ph="..." />
+            <marker date="1521941506767" expanded="true" signature="29738:29985" ph="..." />
+            <marker date="1521941506767" expanded="true" signature="30229:30456" ph="..." />
+            <marker date="1521941506767" expanded="true" signature="30248:30394" ph="..." />
           </folding>
         </state>
       </provider>
