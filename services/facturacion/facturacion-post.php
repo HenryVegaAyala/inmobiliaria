@@ -39,15 +39,16 @@ $objFacturacion = new clsFacturacion();
 $objCobranza = new clsCobranza();
 $objPropiedad = new clsPropiedad();
 
-if ($_POST){
-    if (isset($_POST['btnGenerar'])){
+if ($_POST) {
+    if (isset($_POST['btnGenerar'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : date('Y');
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
         $txtFechaVencimiento = (isset($_POST['txtFechaVencimiento'])) ? fecha_mysql($_POST['txtFechaVencimiento']) : date('Y-m-d');
         $txtFechaTope = (isset($_POST['txtFechaTope'])) ? fecha_mysql($_POST['txtFechaTope']) : date('Y-m-d');
 
-        $objFacturacion->GenerarFacturacion($hdIdProyecto, 1, '0', $hdAnho, $hdMes, $txtFechaVencimiento, $txtFechaTope, '0', 1, $idusuario, $rpta, $titulomsje, $contenidomsje);
+        $objFacturacion->GenerarFacturacion($hdIdProyecto, 1, '0', $hdAnho, $hdMes, $txtFechaVencimiento, $txtFechaTope,
+            '0', 1, $idusuario, $rpta, $titulomsje, $contenidomsje);
 
 
         // $rpta = '1';
@@ -61,15 +62,14 @@ if ($_POST){
         // if (is_dir($folderPDF))
         //     deleteDir($folderPDF);
 
-    }
-    elseif (isset($_POST['btnEliminarFacturacionPrevia'])){
+    } elseif (isset($_POST['btnEliminarFacturacionPrevia'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : '0';
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : '0';
 
-        $objFacturacion->EliminarFacturacionPrevia($hdIdProyecto, $hdAnho, $hdMes, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    }
-    elseif (isset($_POST['btnRegenerar'])){
+        $objFacturacion->EliminarFacturacionPrevia($hdIdProyecto, $hdAnho, $hdMes, $idusuario, $rpta, $titulomsje,
+            $contenidomsje);
+    } elseif (isset($_POST['btnRegenerar'])) {
         $hdTipoFacturacion = (isset($_POST['hdTipoFacturacion'])) ? $_POST['hdTipoFacturacion'] : '1';
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdIdPropiedad = (isset($_POST['hdIdPropiedad'])) ? $_POST['hdIdPropiedad'] : '0';
@@ -78,9 +78,9 @@ if ($_POST){
         $txtFechaVencimiento = (isset($_POST['txtFechaVencimiento'])) ? fecha_mysql($_POST['txtFechaVencimiento']) : date('Y-m-d');
         $txtFechaTope = (isset($_POST['txtFechaTope'])) ? fecha_mysql($_POST['txtFechaTope']) : date('Y-m-d');
 
-        $objFacturacion->GenerarFacturacion($hdIdProyecto, $hdTipoFacturacion, $hdIdPropiedad, $hdAnho, $hdMes, $txtFechaVencimiento, $txtFechaTope, '0', 1, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    }
-    elseif (isset($_POST['btnSumarAgua'])) {
+        $objFacturacion->GenerarFacturacion($hdIdProyecto, $hdTipoFacturacion, $hdIdPropiedad, $hdAnho, $hdMes,
+            $txtFechaVencimiento, $txtFechaTope, '0', 1, $idusuario, $rpta, $titulomsje, $contenidomsje);
+    } elseif (isset($_POST['btnSumarAgua'])) {
         $aguames = 0;
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : '0';
@@ -89,14 +89,14 @@ if ($_POST){
         // $objFacturacion->SumarAguaMes($hdIdProyecto, $hdAnho, $hdMes, $rpta, $aguames);
 
         $titulomsje = $objFacturacion->SumarAguaMes($hdIdProyecto, $hdAnho, $hdMes);
-    }
-    elseif (isset($_POST['btnCalcularConsumo'])){
+    } elseif (isset($_POST['btnCalcularConsumo'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : date('Y');
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
         $detallePropiedad = json_decode(stripslashes($_POST['detallePropiedad']));
 
-        $objFacturacion->EliminarConsumoEscalonable($hdIdProyecto, $hdAnho, $hdMes, $idusuario, $rpta, $titulodetmsje, $contenidodetmsje);
+        $objFacturacion->EliminarConsumoEscalonable($hdIdProyecto, $hdAnho, $hdMes, $idusuario, $rpta, $titulodetmsje,
+            $contenidodetmsje);
 
         // if (isset($_POST['consumo'])) {
         //     foreach ($_POST['consumo'] as $consumo) {
@@ -104,10 +104,12 @@ if ($_POST){
         //     }
         // }
         foreach ($detallePropiedad as $item) {
-            $objFacturacion->RegistrarConsumoEscalonable('0', $hdIdProyecto, $item->idpropiedad, $hdAnho, $hdMes, 'CN00000099', $item->lecturaanterior, $item->lecturaactual, $item->consumo, fecha_mysql($item->fechaini), fecha_mysql($item->fechafin), $idusuario, $rpta, $titulomsje, $contenidomsje);
+            $objFacturacion->RegistrarConsumoEscalonable('0', $hdIdProyecto, $item->idpropiedad, $hdAnho, $hdMes,
+                'CN00000099', $item->lecturaanterior, $item->lecturaactual, $item->consumo,
+                fecha_mysql($item->fechaini), fecha_mysql($item->fechafin), $idusuario, $rpta, $titulomsje,
+                $contenidomsje);
         }
-    }
-    elseif (isset($_POST['btnCalcularConsumo_Concepto'])){
+    } elseif (isset($_POST['btnCalcularConsumo_Concepto'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdIdConcepto = (isset($_POST['hdIdConcepto'])) ? $_POST['hdIdConcepto'] : '0';
 
@@ -115,10 +117,12 @@ if ($_POST){
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
         $detallePropiedad = json_decode(stripslashes($_POST['detallePropiedad']));
 
-        $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $hdAnho, $hdMes, $idusuario, $rpta, $titulodetmsje, $contenidodetmsje);
+        $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $hdAnho, $hdMes, $idusuario, $rpta,
+            $titulodetmsje, $contenidodetmsje);
 
         foreach ($detallePropiedad as $item) {
-            $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $item->idpropiedad, $hdAnho, $hdMes, $hdIdConcepto, $item->importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
+            $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $item->idpropiedad, $hdAnho, $hdMes,
+                $hdIdConcepto, $item->importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
         }
 
         // if (isset($_POST['conceptovariable'])) {
@@ -126,8 +130,7 @@ if ($_POST){
         //         $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $conceptovariable['idpropiedad'], $hdAnho, $hdMes, $hdIdConcepto, $conceptovariable['importe'], $idusuario, $rpta, $titulomsje, $contenidomsje);
         //     }
         // }
-    }
-    elseif (isset($_POST['btnGenerarConceptoVariable'])) {
+    } elseif (isset($_POST['btnGenerarConceptoVariable'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : date('Y');
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
@@ -142,50 +145,52 @@ if ($_POST){
             $rpta = '0';
             $titulomsje = 'No se puede generar concepto variable por no haber un concepto de consumo de agua';
             $contenidomsje = 'La operación no pudo completarse';
-        }
-        else {
-            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo_Concepto('2', $hdIdProyecto, $hdAnho, $hdMes, 0, $hdIdConcepto);
-            $countRsPropiedad =  count($rsPropiedad);
+        } else {
+            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo_Concepto('2', $hdIdProyecto, $hdAnho, $hdMes, 0,
+                $hdIdConcepto);
+            $countRsPropiedad = count($rsPropiedad);
 
             if ($countRsPropiedad > 0) {
                 $importe = ($txtImporteSaldo - $hdTotalConsumo_Gen) / $countRsPropiedad;
 
-                $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $hdAnho, $hdMes, $idusuario, $rpta, $titulodetmsje, $contenidodetmsje);
+                $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $hdAnho, $hdMes, $idusuario,
+                    $rpta, $titulodetmsje, $contenidodetmsje);
 
-                while($rowCount < $countRsPropiedad){
-                    $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $rsPropiedad[$rowCount]['tm_idpropiedad'], $hdAnho, $hdMes, $hdIdConcepto, $importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
+                while ($rowCount < $countRsPropiedad) {
+                    $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto,
+                        $rsPropiedad[$rowCount]['tm_idpropiedad'], $hdAnho, $hdMes, $hdIdConcepto, $importe, $idusuario,
+                        $rpta, $titulomsje, $contenidomsje);
                     ++$rowCount;
                 }
-            }
-            else {
+            } else {
                 $rpta = '0';
                 $titulomsje = 'No se puede generar concepto variable por no existir propiedades para este proyecto';
                 $contenidomsje = 'La operación no pudo completarse';
             }
         }
-    }
-    elseif (isset($_POST['btnRegistrarAscensor'])){
+    } elseif (isset($_POST['btnRegistrarAscensor'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '0';
         $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '0';
         $detalleTorre = json_decode(stripslashes($_POST['detalleTorre']));
 
         foreach ($detalleTorre as $item) {
-            $objFacturacion->RegistrarConsumoAscensor($item->iditem, $hdIdProyecto, $item->idtorre, $ddlMes, $ddlAnho, $item->nrosuministro, $item->importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
+            $objFacturacion->RegistrarConsumoAscensor($item->iditem, $hdIdProyecto, $item->idtorre, $ddlMes, $ddlAnho,
+                $item->nrosuministro, $item->importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
         }
-    }
-    elseif (isset($_POST['btnGuardarConcepto'])){
+    } elseif (isset($_POST['btnGuardarConcepto'])) {
         $hdIdFacturacion = (isset($_POST['hdIdFacturacion'])) ? $_POST['hdIdFacturacion'] : '0';
         $txtTotalImporte = (isset($_POST['txtTotalImporte'])) ? $_POST['txtTotalImporte'] : '0';
         $detalleConcepto = json_decode(stripslashes($_POST['detalleConcepto']));
 
         foreach ($detalleConcepto as $item) {
-            $objFacturacion->RegistrarConceptoTrans($item->iditem, $item->valorconcepto, $idusuario, $rpta, $titulomsje, $contenidomsje);
+            $objFacturacion->RegistrarConceptoTrans($item->iditem, $item->valorconcepto, $idusuario, $rpta, $titulomsje,
+                $contenidomsje);
         }
 
-        $objFacturacion->ActualizarImporteFacturacion($hdIdFacturacion, $txtTotalImporte, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    }
-    elseif (isset($_POST['btnDividirFactura'])){
+        $objFacturacion->ActualizarImporteFacturacion($hdIdFacturacion, $txtTotalImporte, $idusuario, $rpta,
+            $titulomsje, $contenidomsje);
+    } elseif (isset($_POST['btnDividirFactura'])) {
         $hdIdFacturacion = (isset($_POST['hdIdFacturacion'])) ? $_POST['hdIdFacturacion'] : '0';
         $hdIdPropiedad = (isset($_POST['hdIdPropiedad'])) ? $_POST['hdIdPropiedad'] : '0';
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
@@ -196,10 +201,11 @@ if ($_POST){
         //objFacturacion->Eliminar($hdIdFacturacion, $idusuario, $rpta, $titulomsje, $contenidomsje);
 
         foreach ($detallePropietario as $item) {
-            $objFacturacion->RegistrarIncidencias($item->iditem, $hdIdProyecto, $ddlAnho, $ddlMes, $hdIdPropiedad, $item->idpropietario, $item->diasincidencia, '000', 1, 1, 0, $idusuario, $rpta, $titulomsje, $contenidomsje);
+            $objFacturacion->RegistrarIncidencias($item->iditem, $hdIdProyecto, $ddlAnho, $ddlMes, $hdIdPropiedad,
+                $item->idpropietario, $item->diasincidencia, '000', 1, 1, 0, $idusuario, $rpta, $titulomsje,
+                $contenidomsje);
         }
-    }
-    elseif (isset($_POST['btnEliminar'])) {
+    } elseif (isset($_POST['btnEliminar'])) {
         /*$chkItem = $_POST['chkItem'];
         if (isset($chkItem)){
             if (is_array($chkItem)) {
@@ -209,45 +215,59 @@ if ($_POST){
         }*/
         $hdIdFacturacion = $_POST['hdIdFacturacion'];
         $rpta = $objFacturacion->EliminarStepByStep($hdIdFacturacion, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    }
-    elseif (isset($_POST['btnGenerarPDF']) || isset($_POST['btnExportar'])) {
+    } elseif (isset($_POST['btnGenerarPDF']) || isset($_POST['btnExportar'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '2015';
         $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '1';
         $directorioServer = '';
 
-        if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1'))
+        if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')) {
             $directorioServer = 'cinadsacv2';
-        else
+        } else {
             $directorioServer = 'http://cinadsacenter.com';
+        }
 
-        $folderPDF = $directorioServer.'/media/pdf/'.$hdIdProyecto.$ddlAnho.$ddlMes.'/';
+        $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
+        $folderPDF = $directorioServer . '/media/pdf/' . $filePDf . '/';
 
-        if (!is_dir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF))
-            mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF, 0777);
+        if (!is_dir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF)) {
+            mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF, 0777,true);
+        }
 
         if (isset($_POST['btnGenerarPDF'])) {
             require '../../bussiness/condominio.php';
 
             $objProyecto = new clsProyecto();
-
-            $de = (isset($_POST['de'])) ? $_POST['de'] : $email_Default;
-            $asunto = (isset($_POST['asunto'])) ? $_POST['asunto'] : '';
-            $tipoGen = (isset($_POST['tipoGen'])) ? $_POST['tipoGen'] : 'EXPORTACION';
-            $hdIdFacturacion = (isset($_POST['hdIdFacturacion'])) ? $_POST['hdIdFacturacion'] : '0';
-            $hdIdPropietario = (isset($_POST['hdIdPropietario'])) ? $_POST['hdIdPropietario'] : '0';
-            $hdIdPropiedad = (isset($_POST['hdIdPropiedad'])) ? $_POST['hdIdPropiedad'] : '0';
-            $txtCodigo = (isset($_POST['txtCodigo'])) ? $_POST['txtCodigo'] : '0';
-            $txtFechaEmision =  (isset($_POST['txtFechaEmision'])) ? $_POST['txtFechaEmision'] : '';
-            $txtFechaVencimiento =  (isset($_POST['txtFechaVencimiento'])) ? $_POST['txtFechaVencimiento'] : '0';
-            $txtFechaTope =  (isset($_POST['txtFechaTope'])) ? $_POST['txtFechaTope'] : '0';
-            $txtRatio =  (isset($_POST['txtRatio'])) ? $_POST['txtRatio'] : '0';
-            $txtSimboloMoneda =  (isset($_POST['txtSimboloMoneda'])) ? $_POST['txtSimboloMoneda'] : '';
-            $txtTotalImporte = (isset($_POST['txtTotalImporte'])) ? $_POST['txtTotalImporte'] : '0';
+            $de = isset($_POST['de']) ? $_POST['de'] : $email_Default;
+            $asunto = isset($_POST['asunto']) ? $_POST['asunto'] : '';
+            $tipoGen = isset($_POST['tipoGen']) ? $_POST['tipoGen'] : 'EXPORTACION';
+            $hdIdFacturacion = isset($_POST['hdIdFacturacion']) ? $_POST['hdIdFacturacion'] : '0';
+            $hdIdPropietario = isset($_POST['hdIdPropietario']) ? $_POST['hdIdPropietario'] : '0';
+            $hdIdPropiedad = isset($_POST['hdIdPropiedad']) ? $_POST['hdIdPropiedad'] : '0';
+            $txtCodigo = isset($_POST['txtCodigo']) ? $_POST['txtCodigo'] : '0';
+            $txtFechaEmision = isset($_POST['txtFechaEmision']) ? $_POST['txtFechaEmision'] : '';
+            $txtFechaVencimiento = isset($_POST['txtFechaVencimiento']) ? $_POST['txtFechaVencimiento'] : '0';
+            $txtFechaTope = isset($_POST['txtFechaTope']) ? $_POST['txtFechaTope'] : '0';
+            $txtRatio = isset($_POST['txtRatio']) ? $_POST['txtRatio'] : '0';
+            $txtSimboloMoneda = isset($_POST['txtSimboloMoneda']) ? $_POST['txtSimboloMoneda'] : '';
+            $txtTotalImporte = isset($_POST['txtTotalImporte']) ? $_POST['txtTotalImporte'] : '0';
 
             $detalleLog = '';
             $pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i";
-            $meses = array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+            $meses = array(
+                'Enero',
+                'Febrero',
+                'Marzo',
+                'Abril',
+                'Mayo',
+                'Junio',
+                'Julio',
+                'Agosto',
+                'Septiembre',
+                'Octubre',
+                'Noviembre',
+                'Diciembre'
+            );
             $body = '';
             $strdetallePropietario = '';
             $strdetallePropiedadDPT = '';
@@ -334,18 +354,18 @@ if ($_POST){
             if ($countPropiedadDPT > 0) {
                 // echo $rowPropiedadDPT[0]['tm_idtipopropiedad'];
                 if ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'DPT') {
-                    $rowPropiedadEST = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto, $hdIdPropiedad, 'EST');
-                    $rowPropiedadDEP = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto, $hdIdPropiedad, 'DEP');
+                    $rowPropiedadEST = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto,
+                        $hdIdPropiedad, 'EST');
+                    $rowPropiedadDEP = $objFacturacion->ListarPropiedad_RelacionadaProyecto($hdIdProyecto,
+                        $hdIdPropiedad, 'DEP');
 
                     $countPropiedadEST = count($rowPropiedadEST);
                     $countPropiedadDEP = count($rowPropiedadDEP);
-                }
-                else {
+                } else {
                     if ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'EST') {
                         $rowPropiedadEST = $objPropiedad->ListarSimpleId($hdIdPropiedad);
                         $countPropiedadEST = count($rowPropiedadEST);
-                    }
-                    elseif ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'DEP') {
+                    } elseif ($rowPropiedadDPT[0]['tm_idtipopropiedad'] == 'DEP') {
                         $rowPropiedadDEP = $objPropiedad->ListarSimpleId($hdIdPropiedad);
                         $countPropiedadDEP = count($rowPropiedadDEP);
                     }
@@ -355,7 +375,8 @@ if ($_POST){
                 }
             }
 
-            $rowConsumo = $objFacturacion->ListarPropiedadConsumo('3', $hdIdProyecto, $ddlAnho, $ddlMes, $hdIdPropiedad);
+            $rowConsumo = $objFacturacion->ListarPropiedadConsumo('3', $hdIdProyecto, $ddlAnho, $ddlMes,
+                $hdIdPropiedad);
             $countConsumo = count($rowConsumo);
 
 
@@ -380,39 +401,39 @@ if ($_POST){
             if ($countPropiedadDPT > 0) {
                 $CodigoPropiedad = $rowPropiedadDPT[0]['tm_descripcionpropiedad'];
 
-                for ($counterPropiedadDPT=0; $counterPropiedadDPT < $countPropiedadDPT; $counterPropiedadDPT++) {
-                    if (strlen($strdetallePropiedadDPT) > 0)
+                for ($counterPropiedadDPT = 0; $counterPropiedadDPT < $countPropiedadDPT; $counterPropiedadDPT++) {
+                    if (strlen($strdetallePropiedadDPT) > 0) {
                         $strdetallePropiedadDPT .= '-';
+                    }
                     $strdetallePropiedadDPT .= $rowPropiedadDPT[$counterPropiedadDPT]['tm_descripcionpropiedad'];
                 }
-            }
-            else {
+            } else {
                 $strdetallePropiedadDPT = '-';
             }
 
             if ($countPropiedadEST > 0) {
-                for ($counterPropiedadEST=0; $counterPropiedadEST < $countPropiedadEST; $counterPropiedadEST++) {
-                    if (strlen($strdetallePropiedadEST) > 0)
+                for ($counterPropiedadEST = 0; $counterPropiedadEST < $countPropiedadEST; $counterPropiedadEST++) {
+                    if (strlen($strdetallePropiedadEST) > 0) {
                         $strdetallePropiedadEST .= '-';
+                    }
                     $strdetallePropiedadEST .= $rowPropiedadEST[$counterPropiedadEST]['tm_descripcionpropiedad'];
                 }
-            }
-            else {
+            } else {
                 $strdetallePropiedadEST = '-';
             }
 
             if ($countPropiedadDEP > 0) {
-                for ($counterPropiedadDEP=0; $counterPropiedadDEP < $countPropiedadDEP; $counterPropiedadDEP++) {
-                    if (strlen($strdetallePropiedadDEP) > 0)
+                for ($counterPropiedadDEP = 0; $counterPropiedadDEP < $countPropiedadDEP; $counterPropiedadDEP++) {
+                    if (strlen($strdetallePropiedadDEP) > 0) {
                         $strdetallePropiedadDEP .= '-';
+                    }
                     $strdetallePropiedadDEP .= $rowPropiedadDEP[$counterPropiedadDEP]['tm_descripcionpropiedad'];
                 }
-            }
-            else {
+            } else {
                 $strdetallePropiedadDEP = '-';
             }
 
-            if ($countConsumo > 0){
+            if ($countConsumo > 0) {
                 $lecturaanterior = $rowConsumo[0]['td_lecturaanterior'];
                 $lecturaactual = $rowConsumo[0]['td_lecturaactual'];
                 $consumo = $rowConsumo[0]['td_consumoperiodo'];
@@ -434,7 +455,7 @@ if ($_POST){
             if ($countConsumoBarra > 0) {
                 //
 
-                for ($counterConsumoBarra=0; $counterConsumoBarra < $countConsumoBarra; $counterConsumoBarra++) {
+                for ($counterConsumoBarra = 0; $counterConsumoBarra < $countConsumoBarra; $counterConsumoBarra++) {
 
 
                     if ($consumo_maximo > 0) {
@@ -447,13 +468,12 @@ if ($_POST){
                         $porcj_valor_consumo_barra = $porcj_valor_consumo_barra < 1 ? 1 : $porcj_valor_consumo_barra;
 
                         $ancho_barra_blanca = $ancho_barra_blanca < 1 ? 1 : $ancho_barra_blanca;
-                    }
-                    else {
+                    } else {
                         $porcj_valor_consumo_barra = 1;
                         $ancho_barra_blanca = 99;
                     }
 
-                    $consumo_barra .= '<tr height="10px"><td height="10px"><strong>'.$rowConsumoBarra[$counterConsumoBarra]['mes'].'</strong></td><td><table width="100%"><tr><td class="barra_azul" width="'.$porcj_valor_consumo_barra.'%"></td><td width="' .$ancho_barra_blanca.'%"></td></tr></table></td></tr>';
+                    $consumo_barra .= '<tr height="10px"><td height="10px"><strong>' . $rowConsumoBarra[$counterConsumoBarra]['mes'] . '</strong></td><td><table width="100%"><tr><td class="barra_azul" width="' . $porcj_valor_consumo_barra . '%"></td><td width="' . $ancho_barra_blanca . '%"></td></tr></table></td></tr>';
 
                     // echo 'valor_consumo_barra = ' . $valor_consumo_barra . '<br />';
                     // echo 'porcj_valor_consumo_barra = ' . $porcj_valor_consumo_barra . '<br />';
@@ -471,7 +491,7 @@ if ($_POST){
             $altodetalle = 345;
             $altoConceptos = $countConcepto * $alto_fila;
 
-            for ($counterConcepto=0; $counterConcepto < $countConcepto; $counterConcepto++) {
+            for ($counterConcepto = 0; $counterConcepto < $countConcepto; $counterConcepto++) {
 
                 if ($counterConcepto == ($countConcepto - 1)) {
                     if ($countConcepto <= 23) {
@@ -485,7 +505,9 @@ if ($_POST){
             $contenido = file_get_contents('../../media/templates/factura.html');
 
             $content = str_replace('[nombreproyecto]', $rowProyecto[0]['nombreproyecto'], $contenido);
-            $content = str_replace('[logoproyecto]', ($rowProyecto[0]['logo'] == 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $rowProyecto[0]['logo']), $content);
+            $content = str_replace('[logoproyecto]',
+                ($rowProyecto[0]['logo'] == 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $rowProyecto[0]['logo']),
+                $content);
             $content = str_replace('[direccionproyecto]', $rowProyecto[0]['direccionproyecto'], $content);
             $content = str_replace('[propietario/inquilino]', $strdetallePropietario, $content);
             $content = str_replace('[anho]', $ddlAnho, $content);
@@ -506,7 +528,8 @@ if ($_POST){
             $content = str_replace('[fechafin_lectura]', $fechafin_lectura, $content);
             $content = str_replace('[detalleconcepto]', $strdetalleConcepto, $content);
             $content = str_replace('[simbolomoneda]', $txtSimboloMoneda, $content);
-            $content = str_replace('[importetotal]', number_format(RedondeoMagico($txtTotalImporte), 2, '.', ''), $content);
+            $content = str_replace('[importetotal]', number_format(RedondeoMagico($txtTotalImporte), 2, '.', ''),
+                $content);
             $content = str_replace('[fechaemision]', fecha_normal($txtFechaEmision), $content);
             $content = str_replace('[fechavencimiento]', fecha_normal($txtFechaVencimiento), $content);
             $content = str_replace('[fechatope]', fecha_normal($txtFechaTope), $content);
@@ -518,22 +541,22 @@ if ($_POST){
 
             $aviso = '';
 
-            if ($hdIdProyecto == 'CD00000011')
+            if ($hdIdProyecto == 'CD00000011') {
                 $aviso = '1). Se les pide indicar siempre la REFERENCIA en ventanilla. 2). Se cobrara mora de un s/.1.00 diario después de la fecha de vencimiento. 3). A partir del día 07 de no haber cancelado,  se publicará como moroso. 4). Realice sus pagos a tiempo EVITE EL CORTE DE AGUA HASTA EL DIA 05. 5). Recuerde que estar al día en los mantenimientos ayuda a una mejor gestión. LA JUNTA DE PROPIETARIOS';
-            else
+            } else {
                 $aviso = '1). Después de haber cancelado presentar su voucher en administración, portería o enviar por correo: ' . $rowProyecto[0]['emailpago'] . '. 2). En caso de no haber cancelado o acreditado su pago dentro de la fecha, será publicado como moroso 3).';
+            }
 
             $content = str_replace('[aviso]', $aviso, $content);
 
-            $fileFactura =  $folderPDF . $hdIdFacturacion . '.pdf';
+            $fileFactura = $folderPDF . $hdIdFacturacion . '.pdf';
 
             require('../../common/tcpdf/tcpdf.php');
 
-            if ($tipoGen == 'EMAIL'){
+            if ($tipoGen == 'EMAIL') {
                 $tamanho = 'A4';
                 $orientacion = 'P';
-            }
-            else {
+            } else {
                 $tamanho = 'A3';
                 $orientacion = 'L';
                 $content = '<table border="0" width="100%" algin="center" cellspacing="5" cellpadding="0">
@@ -554,7 +577,7 @@ if ($_POST){
         <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            '.$estilo_content.'
+            ' . $estilo_content . '
         </head>
         <body>' . $content . '</body>
         </html>';
@@ -573,7 +596,7 @@ if ($_POST){
             $pdf->Output($fileFactura, 'F');
             //$pdf->Output($_SERVER['DOCUMENT_ROOT'] . '/media/pdf/'.$hdIdProyecto.$ddlAnho.$ddlMes.'.pdf', 'F');
 
-            if ($tipoGen == 'EMAIL'){
+            if ($tipoGen == 'EMAIL') {
                 //$para = 'ismael.limo@gmail.com';
 
                 $destinatario = $rowPropietario[0]['tm_email'];
@@ -612,10 +635,10 @@ if ($_POST){
                         // for ($counterPropietario=0; $counterPropietario < $countPropietario; $counterPropietario++) {
                         $listPara = explode(';', $destinatario);
 
-                        foreach($listPara as $para) {
+                        foreach ($listPara as $para) {
                             $para = trim(strip_tags($para));
 
-                            if (preg_match($pattern, $para)){
+                            if (preg_match($pattern, $para)) {
                                 if (validar_email($para)) {
                                     $mail->addAddress($para);
                                 }
@@ -623,7 +646,7 @@ if ($_POST){
                         }
                         // }
 
-                        $mail->addAttachment( $_SERVER['DOCUMENT_ROOT'] . '/' . $fileFactura, $hdIdFacturacion . '.pdf' );
+                        $mail->addAttachment($_SERVER['DOCUMENT_ROOT'] . '/' . $fileFactura, $hdIdFacturacion . '.pdf');
                         $mail->isHTML(true);
 
                         $objModelo = new clsModeloCarta();
@@ -637,52 +660,48 @@ if ($_POST){
                             $modeloMensaje = str_replace(':ApeNom:', $strdetallePropietario, $modeloMensaje);
                             $modeloMensaje = str_replace(':FechaHoy:', date('d/m/Y'), $modeloMensaje);
                             $modeloMensaje = str_replace(':MesProyecto:', $meses[$ddlMes - 1], $modeloMensaje);
-                            $modeloMensaje = str_replace(':FechaEmision:', fecha_normal($txtFechaEmision), $modeloMensaje);
-                        }
-                        else
+                            $modeloMensaje = str_replace(':FechaEmision:', fecha_normal($txtFechaEmision),
+                                $modeloMensaje);
+                        } else {
                             $modeloMensaje = 'Estimado propietario/inquilino: ' . $strdetallePropietario . ', \neste documento se está enviando para informarle de la facturación del mes indicado en el asunto.\nAtentamente, CINADSAC.';
+                        }
 
-                        $mail->Subject = '=?UTF-8?B?'.base64_encode('CINADSAC LE INFORMA: FACTURACION DEL MES DE '.strtoupper($meses[$ddlMes - 1]).' DEL AÑO '.$ddlAnho).'?=';
-                        $mail->Body    = $modeloMensaje;
+                        $mail->Subject = '=?UTF-8?B?' . base64_encode('CINADSAC LE INFORMA: FACTURACION DEL MES DE ' . strtoupper($meses[$ddlMes - 1]) . ' DEL AÑO ' . $ddlAnho) . '?=';
+                        $mail->Body = $modeloMensaje;
 
                         if (!$mail->send()) {
                             $rpta = '0';
                             $titulomsje = 'Error en el envio';
                             $contenidomsje = $mail->ErrorInfo;
-                        }
-                        else {
+                        } else {
                             $rpta = '1';
                             $titulomsje = 'Enviado correctamente';
                             $contenidomsje = 'La operación se completó satisfatoriamente';
                         }
 
                         $mail->smtpClose();
-                    }
-                    else {
+                    } else {
                         $rpta = '1';
                         $titulomsje = 'Enviado correctamente';
                         $contenidomsje = 'La operación se completó satisfatoriamente';
                     }
-                }
-                else {
+                } else {
                     $rpta = '1';
                     $titulomsje = 'Enviado correctamente';
                     $contenidomsje = 'La operación se completó satisfatoriamente';
                 }
-            }
-            else {
+            } else {
                 $titulomsje = 'Generado correctamente';
                 $contenidomsje = 'La operación se completó satisfatoriamente';
             }
-        }
-        elseif (isset($_POST['btnExportar'])) {
+        } elseif (isset($_POST['btnExportar'])) {
             include("../../common/pdfconcat.php");
 
             $arrayFilesPDF = array();
             $rep = glob($_SERVER['DOCUMENT_ROOT'] . $folderPDF . '*');
 
-            foreach ($rep as $file){
-                if ($file != '..' && $file != '.' && $file != ''){
+            foreach ($rep as $file) {
+                if ($file != '..' && $file != '.' && $file != '') {
                     $fileinfo = pathinfo($file);
 
                     array_push($arrayFilesPDF, $_SERVER['DOCUMENT_ROOT'] . '/' . $folderPDF . $fileinfo['basename']);
@@ -690,8 +709,9 @@ if ($_POST){
             }
             clearstatcache();
 
-            if (file_exists('../../media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf'))
-                unlink('../../media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf');
+            if (file_exists('../../media/pdf/' . $hdIdProyecto . $ddlAnho . $ddlMes . '.pdf')) {
+                unlink('../../media/pdf/' . $hdIdProyecto . $ddlAnho . $ddlMes . '.pdf');
+            }
 
             $pdf = new concat_pdf();
             $pdf->SetCreator(PDF_CREATOR);
@@ -703,12 +723,20 @@ if ($_POST){
 //            $pdf->concat();
 //            $pdf->Output($directorioServer . '/media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf', 'F');
 
+            if (($_SERVER['SERVER_NAME'] == 'localhost') || ($_SERVER['SERVER_NAME'] == '127.0.0.1')) {
+                $directorioServer = 'cinadsacv2';
+            } else {
+                $directorioServer = 'http://cinadsacenter.com';
+            }
+
+            $filePDf = $hdIdProyecto . $ddlAnho . $ddlMes;
+            $folderPDF = $directorioServer . '/media/pdf/' . $filePDf . '/';
+
             $rpta = '1';
             $titulomsje = 'Generado correctamente';
-            $contenidomsje = 'media/pdf/' . $hdIdProyecto.$ddlAnho.$ddlMes . '.pdf';
+            $contenidomsje = $folderPDF . $filePDf . '.pdf';
         }
-    }
-    elseif (isset($_POST['btnExportarPropiedad']) || isset($_POST['btnExportarPropiedad_Concepto']) || isset($_POST['btnExportarFacturasExcel']) || isset($_POST['btnExportarTotalesFacturaExcel'])) {
+    } elseif (isset($_POST['btnExportarPropiedad']) || isset($_POST['btnExportarPropiedad_Concepto']) || isset($_POST['btnExportarFacturasExcel']) || isset($_POST['btnExportarTotalesFacturaExcel'])) {
         require('../../common/PHPExcel.php');
         require('../../common/PHPExcel/Writer/Excel2007.php');
 
@@ -720,7 +748,7 @@ if ($_POST){
 
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
 
-        $nameFileExport = '../../media/xls/'.$hdIdProyecto;
+        $nameFileExport = '../../media/xls/' . $hdIdProyecto;
 
         if (isset($_POST['btnExportarPropiedad'])) {
             $rowCount = 0;
@@ -731,8 +759,9 @@ if ($_POST){
             $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '0';
 
             // Execute the database query
-            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo($hdTipoConsultaExport, $hdIdProyecto, $ddlAnho, $ddlMes, '');
-            $countRsPropiedad =  count($rsPropiedad);
+            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo($hdTipoConsultaExport, $hdIdProyecto, $ddlAnho,
+                $ddlMes, '');
+            $countRsPropiedad = count($rsPropiedad);
 
             $objPHPExcel->getActiveSheet()->SetCellValue('A1', 'CODIGO PROYECTO');
             $objPHPExcel->getActiveSheet()->SetCellValue('B1', 'CODIGO PROPIEDAD');
@@ -745,25 +774,32 @@ if ($_POST){
             $objPHPExcel->getActiveSheet()->SetCellValue('I1', 'FECHA FINAL');
 
             if ($countRsPropiedad > 0) {
-                while($rowCount < $countRsPropiedad){
+                while ($rowCount < $countRsPropiedad) {
                     $urut = $rowCount + 2;
 
-                    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$urut, $hdIdProyecto);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$urut, $rsPropiedad[$rowCount]['tm_idpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('C'.$urut, $rsPropiedad[$rowCount]['tm_descripcionpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('D'.$urut, $rsPropiedad[$rowCount]['td_lecturaanterior']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('E'.$urut, $rsPropiedad[$rowCount]['td_lecturaactual']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('F'.$urut, $rsPropiedad[$rowCount]['td_consumoperiodo']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('G'.$urut, $rsPropiedad[$rowCount]['consumoimporte']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('H'.$urut, fecha_normal($rsPropiedad[$rowCount]['fechaini']));
-                    $objPHPExcel->getActiveSheet()->SetCellValue('I'.$urut, fecha_normal($rsPropiedad[$rowCount]['fechafin']));
+                    $objPHPExcel->getActiveSheet()->SetCellValue('A' . $urut, $hdIdProyecto);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('B' . $urut,
+                        $rsPropiedad[$rowCount]['tm_idpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('C' . $urut,
+                        $rsPropiedad[$rowCount]['tm_descripcionpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('D' . $urut,
+                        $rsPropiedad[$rowCount]['td_lecturaanterior']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('E' . $urut,
+                        $rsPropiedad[$rowCount]['td_lecturaactual']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('F' . $urut,
+                        $rsPropiedad[$rowCount]['td_consumoperiodo']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('G' . $urut,
+                        $rsPropiedad[$rowCount]['consumoimporte']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('H' . $urut,
+                        fecha_normal($rsPropiedad[$rowCount]['fechaini']));
+                    $objPHPExcel->getActiveSheet()->SetCellValue('I' . $urut,
+                        fecha_normal($rsPropiedad[$rowCount]['fechafin']));
                     ++$rowCount;
                 }
             }
 
             $nameFileExport .= '.xlsx';
-        }
-        elseif (isset($_POST['btnExportarPropiedad_Concepto'])) {
+        } elseif (isset($_POST['btnExportarPropiedad_Concepto'])) {
             $hdTipoConsultaExport = (isset($_POST['hdTipoConsultaExport'])) ? $_POST['hdTipoConsultaExport'] : '1';
             $hdIdConcepto = (isset($_POST['hdIdConcepto'])) ? $_POST['hdIdConcepto'] : '0';
             $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : '2015';
@@ -773,8 +809,9 @@ if ($_POST){
 
             // $rsPropiedad = $objPropiedad->ExportarPropiedades_Concepto($hdIdProyecto, $hdIdConcepto);
 
-            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo_Concepto($hdTipoConsultaExport, $hdIdProyecto, $hdAnho, $hdMes, 0, $hdIdConcepto);
-            $countRsPropiedad =  count($rsPropiedad);
+            $rsPropiedad = $objFacturacion->ListarPropiedadConsumo_Concepto($hdTipoConsultaExport, $hdIdProyecto,
+                $hdAnho, $hdMes, 0, $hdIdConcepto);
+            $countRsPropiedad = count($rsPropiedad);
 
             $objPHPExcel->getActiveSheet()->SetCellValue('A1', 'CODIGO PROYECTO');
             $objPHPExcel->getActiveSheet()->SetCellValue('B1', 'CODIGO PROPIEDAD');
@@ -783,20 +820,21 @@ if ($_POST){
             $objPHPExcel->getActiveSheet()->SetCellValue('E1', 'IMPORTE');
 
             if ($countRsPropiedad > 0) {
-                while($rowCount < $countRsPropiedad){
+                while ($rowCount < $countRsPropiedad) {
                     $urut = $rowCount + 2;
-                    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$urut, $hdIdProyecto);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$urut, $rsPropiedad[$rowCount]['tm_idpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('C'.$urut, $rsPropiedad[$rowCount]['tm_descripcionpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('D'.$urut, $hdIdConcepto);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('E'.$urut, $rsPropiedad[$rowCount]['td_importe']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('A' . $urut, $hdIdProyecto);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('B' . $urut,
+                        $rsPropiedad[$rowCount]['tm_idpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('C' . $urut,
+                        $rsPropiedad[$rowCount]['tm_descripcionpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('D' . $urut, $hdIdConcepto);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('E' . $urut, $rsPropiedad[$rowCount]['td_importe']);
                     ++$rowCount;
                 }
             }
 
             $nameFileExport .= '.xlsx';
-        }
-        elseif (isset($_POST['btnExportarFacturasExcel'])) {
+        } elseif (isset($_POST['btnExportarFacturasExcel'])) {
             $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '0';
             $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '0';
 
@@ -818,23 +856,28 @@ if ($_POST){
             $objPHPExcel->getActiveSheet()->SetCellValue('H1', 'VALOR CONCEPTO');
 
             if ($countRsFacturacion > 0) {
-                while($rowCount < $countRsFacturacion){
+                while ($rowCount < $countRsFacturacion) {
                     $urut = $rowCount + 2;
-                    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$urut, $rsFacturacion[$rowCount]['idconceptofacturacion']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$urut, $rsFacturacion[$rowCount]['idfacturacion']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('C'.$urut, $rsFacturacion[$rowCount]['codigofactura']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('D'.$urut, $rsFacturacion[$rowCount]['idpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('E'.$urut, $rsFacturacion[$rowCount]['descripcionpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('F'.$urut, $rsFacturacion[$rowCount]['idconcepto']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('G'.$urut, $rsFacturacion[$rowCount]['descripcionconcepto']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('H'.$urut, $rsFacturacion[$rowCount]['valorconcepto']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('A' . $urut,
+                        $rsFacturacion[$rowCount]['idconceptofacturacion']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('B' . $urut,
+                        $rsFacturacion[$rowCount]['idfacturacion']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('C' . $urut,
+                        $rsFacturacion[$rowCount]['codigofactura']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('D' . $urut, $rsFacturacion[$rowCount]['idpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('E' . $urut,
+                        $rsFacturacion[$rowCount]['descripcionpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('F' . $urut, $rsFacturacion[$rowCount]['idconcepto']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('G' . $urut,
+                        $rsFacturacion[$rowCount]['descripcionconcepto']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('H' . $urut,
+                        $rsFacturacion[$rowCount]['valorconcepto']);
                     ++$rowCount;
                 }
             }
 
-            $nameFileExport .= '_'.$ddlAnho.'_'.$ddlMes.'.xlsx';
-        }
-        elseif (isset($_POST['btnExportarTotalesFacturaExcel'])) {
+            $nameFileExport .= '_' . $ddlAnho . '_' . $ddlMes . '.xlsx';
+        } elseif (isset($_POST['btnExportarTotalesFacturaExcel'])) {
             $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '0';
             $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '0';
 
@@ -852,20 +895,22 @@ if ($_POST){
             $totalfacturado = 0;
 
             if ($countRsFacturacion > 0) {
-                while($rowCount < $countRsFacturacion){
+                while ($rowCount < $countRsFacturacion) {
                     $urut = $rowCount + 2;
                     $importefacturado = RedondeoMagico($rsFacturacion[$rowCount]['tm_importefacturado']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$urut, $rsFacturacion[$rowCount]['descripcionpropiedad']);
-                    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$urut, number_format($importefacturado, 2, '.', ''));
+                    $objPHPExcel->getActiveSheet()->SetCellValue('A' . $urut,
+                        $rsFacturacion[$rowCount]['descripcionpropiedad']);
+                    $objPHPExcel->getActiveSheet()->SetCellValue('B' . $urut,
+                        number_format($importefacturado, 2, '.', ''));
                     $totalfacturado += $importefacturado;
                     ++$rowCount;
                 }
             }
 
-            $objPHPExcel->getActiveSheet()->SetCellValue('A'.($urut + 2), 'IMPORTE TOTAL');
-            $objPHPExcel->getActiveSheet()->SetCellValue('B'.($urut + 2), $totalfacturado);
+            $objPHPExcel->getActiveSheet()->SetCellValue('A' . ($urut + 2), 'IMPORTE TOTAL');
+            $objPHPExcel->getActiveSheet()->SetCellValue('B' . ($urut + 2), $totalfacturado);
 
-            $nameFileExport .= '_'.$ddlAnho.'_'.$ddlMes.'_TF.xlsx';
+            $nameFileExport .= '_' . $ddlAnho . '_' . $ddlMes . '_TF.xlsx';
         }
 
         // Instantiate a Writer to create an OfficeOpenXML Excel .xlsx file
@@ -874,8 +919,7 @@ if ($_POST){
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
         // Write the Excel file to filename some_excel_file.xlsx in the current directory
         $objWriter->save($nameFileExport);
-    }
-    elseif (isset($_POST['btnSubirDatos'])) {
+    } elseif (isset($_POST['btnSubirDatos'])) {
         if (!empty($_FILES['archivo']['name'])) {
             $hdTipoImportacion = (isset($_POST['hdTipoImportacion'])) ? $_POST['hdTipoImportacion'] : '0';
             $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
@@ -884,7 +928,7 @@ if ($_POST){
             $ddlAnhoImport = (isset($_POST['ddlAnhoImport'])) ? $_POST['ddlAnhoImport'] : '0';
             $ddlMesImport = (isset($_POST['ddlMesImport'])) ? $_POST['ddlMesImport'] : '0';
 
-            $upload_folder  = '../../media/xls/';
+            $upload_folder = '../../media/xls/';
 
             $nombre_archivo = $_FILES['archivo']['name'];
             $tipo_archivo = $_FILES['archivo']['type'];
@@ -894,7 +938,7 @@ if ($_POST){
             $nombre_archivo = trim($nombre_archivo);
             $nombre_archivo = str_replace(' ', '', $nombre_archivo);
 
-            $archivador = $upload_folder.$nombre_archivo;
+            $archivador = $upload_folder . $nombre_archivo;
 
             if (move_uploaded_file($tmp_archivo, $archivador)) {
                 require('../../common/PHPExcel.php');
@@ -910,15 +954,16 @@ if ($_POST){
                 if ($hdTipoImportacion == '00') {
                     $rptadet = '0';
 
-                    $objFacturacion->EliminarConsumoEscalonable($hdIdProyecto, $ddlAnhoImport, $ddlMesImport, $idusuario, $rptadet, $titulodetmsje, $contenidodetmsje);
+                    $objFacturacion->EliminarConsumoEscalonable($hdIdProyecto, $ddlAnhoImport, $ddlMesImport,
+                        $idusuario, $rptadet, $titulodetmsje, $contenidodetmsje);
 
-                    for ($i = 2; $i <= $countRowsExcel; $i++){
-                        $CodigoPropiedad = trim($objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue());
+                    for ($i = 2; $i <= $countRowsExcel; $i++) {
+                        $CodigoPropiedad = trim($objPHPExcel->getActiveSheet()->getCell('B' . $i)->getCalculatedValue());
 
-                        $lecturaanterior = trim($objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue());
-                        $lecturaactual = trim($objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue());
-                        $consumo = trim($objPHPExcel->getActiveSheet()->getCell('F'.$i)->getCalculatedValue());
-                        $consumoimporte = trim($objPHPExcel->getActiveSheet()->getCell('G'.$i)->getCalculatedValue());
+                        $lecturaanterior = trim($objPHPExcel->getActiveSheet()->getCell('D' . $i)->getCalculatedValue());
+                        $lecturaactual = trim($objPHPExcel->getActiveSheet()->getCell('E' . $i)->getCalculatedValue());
+                        $consumo = trim($objPHPExcel->getActiveSheet()->getCell('F' . $i)->getCalculatedValue());
+                        $consumoimporte = trim($objPHPExcel->getActiveSheet()->getCell('G' . $i)->getCalculatedValue());
 
                         // echo trim($objPHPExcel->getActiveSheet()->getCell('G'.$i)->getCalculatedValue()) . 's1';
                         // echo trim($objPHPExcel->getActiveSheet()->getCell('H'.$i)->getCalculatedValue()) . 's2';
@@ -932,47 +977,55 @@ if ($_POST){
                         // $fechaini = preg_replace('#(\d{2})/(\d{2})/(\d{4})#', '$3-$2-$1', $fechaini);
                         // $fechafinal = preg_replace('#(\d{2})/(\d{2})/(\d{4})#', '$3-$2-$1', $fechafinal);
 
-                        $_cellDate_ini = $objPHPExcel->getActiveSheet()->getCell('H'.$i);
+                        $_cellDate_ini = $objPHPExcel->getActiveSheet()->getCell('H' . $i);
                         // $_fechaini = $_cellDate_ini->getValue();
 
-                        if (PHPExcel_Shared_Date::isDateTime($_cellDate_ini))
-                            $fechaini = gmdate('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($_cellDate_ini->getCalculatedValue()));
-                        else
+                        if (PHPExcel_Shared_Date::isDateTime($_cellDate_ini)) {
+                            $fechaini = gmdate('Y-m-d',
+                                PHPExcel_Shared_Date::ExcelToPHP($_cellDate_ini->getCalculatedValue()));
+                        } else {
                             $fechaini = fecha_mysql(trim($_cellDate_ini->getValue()));
+                        }
 
-                        $_cellDate_final = $objPHPExcel->getActiveSheet()->getCell('I'.$i);
+                        $_cellDate_final = $objPHPExcel->getActiveSheet()->getCell('I' . $i);
                         // $_fechafinal = $_cellDate_final->getValue();
 
-                        if (PHPExcel_Shared_Date::isDateTime($_cellDate_final))
-                            $fechafinal = gmdate('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($_cellDate_final->getCalculatedValue()));
-                        else
+                        if (PHPExcel_Shared_Date::isDateTime($_cellDate_final)) {
+                            $fechafinal = gmdate('Y-m-d',
+                                PHPExcel_Shared_Date::ExcelToPHP($_cellDate_final->getCalculatedValue()));
+                        } else {
                             $fechafinal = fecha_mysql(trim($_cellDate_final->getValue()));
+                        }
 
                         // echo $fechaini;
                         // echo $fechafinal;
 
-                        $rpta = $objFacturacion->RegistrarConsumoEscalonable('0', $hdIdProyecto, $CodigoPropiedad, $ddlAnhoImport, $ddlMesImport, $hdIdConcepto, $lecturaanterior, $lecturaactual, $consumo, $fechaini, $fechafinal, $idusuario, $rpta, $titulomsje, $contenidomsje);
+                        $rpta = $objFacturacion->RegistrarConsumoEscalonable('0', $hdIdProyecto, $CodigoPropiedad,
+                            $ddlAnhoImport, $ddlMesImport, $hdIdConcepto, $lecturaanterior, $lecturaactual, $consumo,
+                            $fechaini, $fechafinal, $idusuario, $rpta, $titulomsje, $contenidomsje);
                     }
-                }
-                elseif ($hdTipoImportacion == '01') {
+                } elseif ($hdTipoImportacion == '01') {
                     // $hdIdConcepto = (isset($_POST['hdIdConcepto'])) ? $_POST['hdIdConcepto'] : '0';
 
                     $rptadet = '0';
 
-                    $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $ddlAnhoImport, $ddlMesImport, $idusuario, $rptadet, $titulodetmsje, $contenidodetmsje);
+                    $objFacturacion->EliminarConsumoConcepto($hdIdProyecto, $hdIdConcepto, $ddlAnhoImport,
+                        $ddlMesImport, $idusuario, $rptadet, $titulodetmsje, $contenidodetmsje);
 
-                    for ($i = 2; $i <= $countRowsExcel; $i++){
-                        $CodigoPropiedad = trim($objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue());
-                        $importe = trim($objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue());
+                    for ($i = 2; $i <= $countRowsExcel; $i++) {
+                        $CodigoPropiedad = trim($objPHPExcel->getActiveSheet()->getCell('B' . $i)->getCalculatedValue());
+                        $importe = trim($objPHPExcel->getActiveSheet()->getCell('E' . $i)->getCalculatedValue());
 
-                        $rpta = $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $CodigoPropiedad, $ddlAnhoImport, $ddlMesImport, $hdIdConcepto, $importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
+                        $rpta = $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $CodigoPropiedad,
+                            $ddlAnhoImport, $ddlMesImport, $hdIdConcepto, $importe, $idusuario, $rpta, $titulomsje,
+                            $contenidomsje);
                     }
-                }
-                else {
-                    for ($i = 2; $i <= $countRowsExcel; $i++){
-                        $idconceptofacturacion = trim($objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue());
-                        $valorconcepto = trim($objPHPExcel->getActiveSheet()->getCell('H'.$i)->getCalculatedValue());
-                        $rpta = $objFacturacion->ActualizarDetalleFacturacion($idconceptofacturacion, $valorconcepto, $idusuario, $rpta, $titulomsje, $contenidomsje);
+                } else {
+                    for ($i = 2; $i <= $countRowsExcel; $i++) {
+                        $idconceptofacturacion = trim($objPHPExcel->getActiveSheet()->getCell('A' . $i)->getCalculatedValue());
+                        $valorconcepto = trim($objPHPExcel->getActiveSheet()->getCell('H' . $i)->getCalculatedValue());
+                        $rpta = $objFacturacion->ActualizarDetalleFacturacion($idconceptofacturacion, $valorconcepto,
+                            $idusuario, $rpta, $titulomsje, $contenidomsje);
                     }
                 }
             }
