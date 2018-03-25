@@ -62,14 +62,16 @@ if ($_POST) {
         // if (is_dir($folderPDF))
         //     deleteDir($folderPDF);
 
-    } elseif (isset($_POST['btnEliminarFacturacionPrevia'])) {
+    }
+    elseif (isset($_POST['btnEliminarFacturacionPrevia'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : '0';
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : '0';
 
         $objFacturacion->EliminarFacturacionPrevia($hdIdProyecto, $hdAnho, $hdMes, $idusuario, $rpta, $titulomsje,
             $contenidomsje);
-    } elseif (isset($_POST['btnRegenerar'])) {
+    }
+    elseif (isset($_POST['btnRegenerar'])) {
         $hdTipoFacturacion = (isset($_POST['hdTipoFacturacion'])) ? $_POST['hdTipoFacturacion'] : '1';
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdIdPropiedad = (isset($_POST['hdIdPropiedad'])) ? $_POST['hdIdPropiedad'] : '0';
@@ -80,7 +82,8 @@ if ($_POST) {
 
         $objFacturacion->GenerarFacturacion($hdIdProyecto, $hdTipoFacturacion, $hdIdPropiedad, $hdAnho, $hdMes,
             $txtFechaVencimiento, $txtFechaTope, '0', 1, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    } elseif (isset($_POST['btnSumarAgua'])) {
+    }
+    elseif (isset($_POST['btnSumarAgua'])) {
         $aguames = 0;
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : '0';
@@ -89,7 +92,8 @@ if ($_POST) {
         // $objFacturacion->SumarAguaMes($hdIdProyecto, $hdAnho, $hdMes, $rpta, $aguames);
 
         $titulomsje = $objFacturacion->SumarAguaMes($hdIdProyecto, $hdAnho, $hdMes);
-    } elseif (isset($_POST['btnCalcularConsumo'])) {
+    }
+    elseif (isset($_POST['btnCalcularConsumo'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : date('Y');
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
@@ -109,7 +113,8 @@ if ($_POST) {
                 fecha_mysql($item->fechaini), fecha_mysql($item->fechafin), $idusuario, $rpta, $titulomsje,
                 $contenidomsje);
         }
-    } elseif (isset($_POST['btnCalcularConsumo_Concepto'])) {
+    }
+    elseif (isset($_POST['btnCalcularConsumo_Concepto'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdIdConcepto = (isset($_POST['hdIdConcepto'])) ? $_POST['hdIdConcepto'] : '0';
 
@@ -130,7 +135,8 @@ if ($_POST) {
         //         $objFacturacion->RegistrarConceptoVariable('0', $hdIdProyecto, $conceptovariable['idpropiedad'], $hdAnho, $hdMes, $hdIdConcepto, $conceptovariable['importe'], $idusuario, $rpta, $titulomsje, $contenidomsje);
         //     }
         // }
-    } elseif (isset($_POST['btnGenerarConceptoVariable'])) {
+    }
+    elseif (isset($_POST['btnGenerarConceptoVariable'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $hdAnho = (isset($_POST['hdAnho'])) ? $_POST['hdAnho'] : date('Y');
         $hdMes = (isset($_POST['hdMes'])) ? $_POST['hdMes'] : date('m');
@@ -168,7 +174,8 @@ if ($_POST) {
                 $contenidomsje = 'La operación no pudo completarse';
             }
         }
-    } elseif (isset($_POST['btnRegistrarAscensor'])) {
+    }
+    elseif (isset($_POST['btnRegistrarAscensor'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '0';
         $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '0';
@@ -178,7 +185,8 @@ if ($_POST) {
             $objFacturacion->RegistrarConsumoAscensor($item->iditem, $hdIdProyecto, $item->idtorre, $ddlMes, $ddlAnho,
                 $item->nrosuministro, $item->importe, $idusuario, $rpta, $titulomsje, $contenidomsje);
         }
-    } elseif (isset($_POST['btnGuardarConcepto'])) {
+    }
+    elseif (isset($_POST['btnGuardarConcepto'])) {
         $hdIdFacturacion = (isset($_POST['hdIdFacturacion'])) ? $_POST['hdIdFacturacion'] : '0';
         $txtTotalImporte = (isset($_POST['txtTotalImporte'])) ? $_POST['txtTotalImporte'] : '0';
         $detalleConcepto = json_decode(stripslashes($_POST['detalleConcepto']));
@@ -190,7 +198,8 @@ if ($_POST) {
 
         $objFacturacion->ActualizarImporteFacturacion($hdIdFacturacion, $txtTotalImporte, $idusuario, $rpta,
             $titulomsje, $contenidomsje);
-    } elseif (isset($_POST['btnDividirFactura'])) {
+    }
+    elseif (isset($_POST['btnDividirFactura'])) {
         $hdIdFacturacion = (isset($_POST['hdIdFacturacion'])) ? $_POST['hdIdFacturacion'] : '0';
         $hdIdPropiedad = (isset($_POST['hdIdPropiedad'])) ? $_POST['hdIdPropiedad'] : '0';
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
@@ -205,7 +214,8 @@ if ($_POST) {
                 $item->idpropietario, $item->diasincidencia, '000', 1, 1, 0, $idusuario, $rpta, $titulomsje,
                 $contenidomsje);
         }
-    } elseif (isset($_POST['btnEliminar'])) {
+    }
+    elseif (isset($_POST['btnEliminar'])) {
         /*$chkItem = $_POST['chkItem'];
         if (isset($chkItem)){
             if (is_array($chkItem)) {
@@ -215,7 +225,8 @@ if ($_POST) {
         }*/
         $hdIdFacturacion = $_POST['hdIdFacturacion'];
         $rpta = $objFacturacion->EliminarStepByStep($hdIdFacturacion, $idusuario, $rpta, $titulomsje, $contenidomsje);
-    } elseif (isset($_POST['btnGenerarPDF']) || isset($_POST['btnExportar'])) {
+    }
+    elseif (isset($_POST['btnGenerarPDF']) || isset($_POST['btnExportar'])) {
         $hdIdProyecto = (isset($_POST['hdIdProyecto'])) ? $_POST['hdIdProyecto'] : '0';
         $ddlAnho = (isset($_POST['ddlAnho'])) ? $_POST['ddlAnho'] : '2015';
         $ddlMes = (isset($_POST['ddlMes'])) ? $_POST['ddlMes'] : '1';
