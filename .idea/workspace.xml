@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="546bd59a-d346-46bd-b2b0-01c629ebb62d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ/schema/public.abK9xQ.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/inmobiliaria.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/services/facturacion/error_log" afterPath="$PROJECT_DIR$/services/facturacion/error_log" />
-      <change beforePath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" afterPath="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/storage_v2/_src_/database/cinadsac_inmobiliaria.qdZiHQ/schema/public.abK9xQ.meta" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bussiness/tabla.php" afterPath="$PROJECT_DIR$/bussiness/tabla.php" />
+      <change beforePath="$PROJECT_DIR$/services/facturacion/facturacion-search.php" afterPath="$PROJECT_DIR$/services/facturacion/facturacion-search.php" />
+      <change beforePath="$PROJECT_DIR$/services/reporteria/reporteador-post.php" afterPath="$PROJECT_DIR$/services/reporteria/reporteador-post.php" />
+      <change beforePath="$PROJECT_DIR$/services/tabla/tabla-search.php" afterPath="$PROJECT_DIR$/services/tabla/tabla-search.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,73 +32,53 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cinadsac_inmobiliaria@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cinadsac_inmobiliaria: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="facturacion-post.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
+    <leaf>
+      <file leaf-file-name="reporteador-post.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/reporteria/reporteador-post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="762" column="40" lean-forward="true" selection-start-line="762" selection-start-column="40" selection-end-line="762" selection-end-column="40" />
+            <state relative-caret-position="170">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
-                <element signature="e#915#58772#0#PHP" expanded="false" />
-                <element signature="e#1991#2423#0#PHP" expanded="false" />
-                <element signature="e#2428#3355#0#PHP" expanded="false" />
-                <element signature="e#3360#3831#0#PHP" expanded="false" />
-                <element signature="e#3836#5231#0#PHP" expanded="false" />
-                <element signature="e#5236#6521#0#PHP" expanded="false" />
-                <element signature="e#6526#8521#0#PHP" expanded="false" />
-                <element signature="e#8526#9162#0#PHP" expanded="false" />
-                <element signature="e#9167#9857#0#PHP" expanded="false" />
-                <element signature="e#9862#10839#0#PHP" expanded="false" />
-                <element signature="e#10844#11367#0#PHP" expanded="false" />
-                <element signature="e#13856#14192#0#PHP" expanded="false" />
-                <element signature="e#14520#14549#0#PHP" expanded="false" />
-                <element signature="e#14657#16661#0#PHP" expanded="false" />
-                <element signature="e#18267#19571#0#PHP" expanded="false" />
-                <element signature="e#20251#20630#0#PHP" expanded="false" />
-                <element signature="e#20644#21227#0#PHP" expanded="false" />
-                <element signature="e#21160#21227#0#PHP" expanded="false" />
-                <element signature="e#21241#21741#0#PHP" expanded="false" />
-                <element signature="e#21674#21741#0#PHP" expanded="false" />
-                <element signature="e#22188#22255#0#PHP" expanded="false" />
-                <element signature="e#22269#22669#0#PHP" expanded="false" />
-                <element signature="e#23037#24612#0#PHP" expanded="false" />
-                <element signature="e#25051#25662#0#PHP" expanded="false" />
-                <element signature="e#28646#29406#0#PHP" expanded="false" />
-                <element signature="e#29113#29406#0#PHP" expanded="false" />
-                <element signature="e#30011#30839#0#PHP" expanded="false" />
-                <element signature="e#30122#30839#0#PHP" expanded="false" />
-                <element signature="e#31277#31379#0#PHP" expanded="false" />
-                <element signature="e#32584#37389#0#PHP" expanded="false" />
-                <element signature="e#32826#37219#0#PHP" expanded="false" />
-                <element signature="e#37234#37389#0#PHP" expanded="false" />
-                <element signature="e#41722#52197#0#PHP" expanded="false" />
-                <element signature="e#52202#58772#0#PHP" expanded="false" />
-                <marker date="1521998300830" expanded="false" signature="31045:31272" ph="..." />
+                <element signature="e#17353#19341#0#PHP" expanded="false" />
+                <marker date="1523646758417" expanded="true" signature="9506:9521" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="9571:9605" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="9857:9872" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="9910:9925" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="9968:9987" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="10131:10148" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="17795:18154" ph="..." />
+                <marker date="1523646758417" expanded="true" signature="17808:18100" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error_log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/facturacion/error_log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="724" column="0" lean-forward="true" selection-start-line="724" selection-start-column="0" selection-end-line="724" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cinadsacenter.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/cinadsacenter.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6293">
-              <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,16 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loadModule rew</find>
-      <find>$pdf-&gt;Output</find>
-      <find>$contenidomsje</find>
-      <find>$titulomsje = 'Generado correctamente';</find>
-      <find>$directorioServer</find>
-      <find>Output</find>
-      <find>$rowPropietario</find>
-      <find>$countProyecto</find>
-      <find>$countPropiedadDPT</find>
-      <find>$countConsumoBarraMax</find>
       <find>FN0000000117205</find>
       <find>logger</find>
       <find>Numero</find>
@@ -151,12 +114,24 @@
       <find>date</find>
       <find>$fileFactura</find>
       <find>Files de PDF</find>
+      <find>pa_facturacion_propiedad_deudames_listar</find>
+      <find>pa_facturacion_propiedad_listar</find>
+      <find>pa_facturacion_propiedad_saldomes_listar</find>
+      <find>FACTURACIONPROP__SALDOMES</find>
+      <find>idproyecto</find>
+      <find>idpropiedad</find>
+      <find>==</find>
+      <find>&quot;</find>
+      <find>$fileReport</find>
+      <find>$objPHPExcel</find>
     </findStrings>
     <replaceStrings>
       <replace>inmobiliaria</replace>
       <replace>'inmobiliaria'</replace>
       <replace>.log</replace>
       <replace>cinadsacenter.log</replace>
+      <replace>===</replace>
+      <replace>'</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp64\www\inmobiliaria\dist\js\app</dir>
@@ -174,7 +149,6 @@
         <option value="$PROJECT_DIR$/common/libraries-js.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/882a8708-3734-40f5-825a-f11633a7d767/console.sql" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/adata/Db.class.php" />
         <option value="$PROJECT_DIR$/error_log" />
         <option value="$PROJECT_DIR$/dist/js/app/process/facturacion-script.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -184,12 +158,19 @@
         <option value="C:/Windows/System32/drivers/etc/hosts" />
         <option value="$PROJECT_DIR$/../../bin/apache/apache2.4.23/conf/extra/httpd-vhosts.conf" />
         <option value="$PROJECT_DIR$/logs/index.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e11dab4b-3a81-4924-9059-1df2a9424427/console.sql" />
         <option value="$PROJECT_DIR$/logs/log.text" />
         <option value="$PROJECT_DIR$/common/pdfconcat.php" />
         <option value="$PROJECT_DIR$/services/facturacion/facturacion-post.php" />
         <option value="$PROJECT_DIR$/logs/cinadsacenter.log" />
         <option value="$PROJECT_DIR$/services/facturacion/error_log" />
+        <option value="$PROJECT_DIR$/adata/Db.class.php" />
+        <option value="$PROJECT_DIR$/services/facturacion/facturacion-search.php" />
+        <option value="/6e98fd85/e11dab4b-3a81-4924-9059-1df2a9424427/database/cinadsac_inmobiliaria/schema/public/routine/pa_facturacion_propiedad_saldomes_listar@(varchar,smallint,smallint,varchar).sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e11dab4b-3a81-4924-9059-1df2a9424427/console.sql" />
+        <option value="$PROJECT_DIR$/bussiness/facturacion.php" />
+        <option value="$PROJECT_DIR$/services/tabla/tabla-search.php" />
+        <option value="$PROJECT_DIR$/bussiness/tabla.php" />
+        <option value="$PROJECT_DIR$/services/reporteria/reporteador-post.php" />
       </list>
     </option>
   </component>
@@ -199,12 +180,85 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PHPCodeSnifferProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="203" />
-    <option name="y" value="67" />
+    <option name="x" value="133" />
+    <option name="y" value="71" />
     <option name="width" value="1100" />
     <option name="height" value="598" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code StylePHP</id>
+          </State>
+          <State>
+            <id>Code StylePhp Inspections (EA Extended)PHP</id>
+          </State>
+          <State>
+            <id>Code quality toolsCSS</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Code style issuesCSS</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control FlowPhp Inspections (EA Extended)PHP</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventionsPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Php Inspections (EA Extended)PHP</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>RegExp</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpCSValidationInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -224,6 +278,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="inmobiliaria" type="cbb8eebc:String" user="inmobiliaria" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,73 +300,13 @@
             <path>
               <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fpdi" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="logs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CD0000000220172" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CD0000000220182" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="media" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pdf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CD00000002201712" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="inmobiliaria" type="b2602c69:ProjectViewProjectNode" />
               <item name="inmobiliaria" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="facturacion" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="inmobiliaria" type="cbb8eebc:String" user="inmobiliaria" />
+              <item name="reporteria" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -322,6 +328,8 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../listfiles" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="reporteador-post.php&#9;FILE&#9;file://C:/wamp64/www/inmobiliaria/services/reporteria/reporteador-post.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -367,7 +375,10 @@
       <workItem from="1521946464706" duration="3842000" />
       <workItem from="1521950324714" duration="30000" />
       <workItem from="1521950382417" duration="1616000" />
-      <workItem from="1521952039172" duration="19265000" />
+      <workItem from="1521952039172" duration="24865000" />
+      <workItem from="1522808889655" duration="51000" />
+      <workItem from="1523125590258" duration="10705000" />
+      <workItem from="1523644289042" duration="2461000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1521437163212</created>
@@ -432,11 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521945599241</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ajuste exportar PDF">
+      <created>1521999058551</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1521999058551</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77131000" />
+    <option name="totallyTimeSpent" value="95948000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -449,29 +467,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32561728" sideWeight="0.5045386" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32561728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17700455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32561728" sideWeight="0.49546143" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.50617284" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15279879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31467474" sideWeight="0.49382716" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45524693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -542,27 +561,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/services/facturacion/facturacion-post.php</url>
-          <line>705</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db-OneConnect.class.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/cinadsacv2.sublime-workspace" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/acceso.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/libraries-js.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/index.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/header.php" />
-    <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/change-owner-reports.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.720/dump.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/882a8708-3734-40f5-825a-f11633a7d767/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -614,13 +617,6 @@
     <entry file="file://$PROJECT_DIR$/../cinadsacv2/adata/Db.class.php" />
     <entry file="file://$PROJECT_DIR$/../cinadsacv2/common/tcpdf/tcpdf.php" />
     <entry file="file://$PROJECT_DIR$/../cinadsacv2/services/facturacion/facturacion-post.php" />
-    <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../cinadsacenter.pe/public_html/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -661,32 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1477#1483#0" expanded="false" />
-            <element signature="e#2773#2779#0" expanded="false" />
-            <element signature="e#3375#3381#0" expanded="false" />
-            <element signature="e#11401#11407#0" expanded="false" />
-            <element signature="e#11473#11479#0" expanded="false" />
-            <element signature="e#11545#11551#0" expanded="false" />
-            <element signature="e#12337#12343#0" expanded="false" />
-            <element signature="e#12424#12430#0" expanded="false" />
-            <element signature="e#12511#12517#0" expanded="false" />
-            <element signature="e#35282#35288#0" expanded="false" />
-            <element signature="e#35705#35711#0" expanded="false" />
-            <element signature="e#36128#36134#0" expanded="false" />
-            <element signature="e#71510#71516#0" expanded="false" />
-            <element signature="e#85240#85246#0" expanded="false" />
-            <element signature="e#91538#91544#0" expanded="false" />
-            <element signature="e#159416#159422#0" expanded="false" />
-            <element signature="e#159921#159927#0" expanded="false" />
-            <element signature="e#160426#160432#0" expanded="false" />
-            <element signature="e#167208#167214#0" expanded="false" />
-            <element signature="e#167964#167970#0" expanded="false" />
-            <element signature="e#168720#168726#0" expanded="false" />
-            <element signature="e#225890#225896#0" expanded="false" />
-            <element signature="e#226705#226711#0" expanded="false" />
-            <element signature="e#227520#227526#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -694,51 +664,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="470" column="9" lean-forward="false" selection-start-line="470" selection-start-column="9" selection-end-line="470" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="91" column="49" lean-forward="false" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="49" />
-          <folding>
-            <marker date="1521438269343" expanded="true" signature="2134:2166" ph="SELECT * FRO... ${$sp_name}" />
-            <marker date="1521438269343" expanded="true" signature="2767:2799" ph="SELECT * FRO... ${$sp_name}" />
-            <marker date="1521438269343" expanded="true" signature="3591:3623" ph="SELECT * FRO... ${$sp_name}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e11dab4b-3a81-4924-9059-1df2a9424427/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/log.text">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log.text" />
     <entry file="file://$PROJECT_DIR$/bussiness/condominio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/facturacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="251" column="13" lean-forward="false" selection-start-line="251" selection-start-column="13" selection-end-line="251" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="901" column="9" lean-forward="false" selection-start-line="901" selection-start-column="9" selection-end-line="901" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3213">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="2317" column="24" lean-forward="false" selection-start-line="2317" selection-start-column="24" selection-end-line="2317" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,66 +700,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/facturacion/error_log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="724" column="0" lean-forward="true" selection-start-line="724" selection-start-column="0" selection-end-line="724" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/cinadsacenter.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6293">
+        <state relative-caret-position="-6279">
           <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbSrc:///6e98fd85/e11dab4b-3a81-4924-9059-1df2a9424427/database/cinadsac_inmobiliaria/schema/public/routine/pa_facturacion_propiedad_listar@(varchar,smallint,varchar).sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/dump.sql">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-278503">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/facturacion/error_log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-checkfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="762" column="40" lean-forward="true" selection-start-line="762" selection-start-column="40" selection-end-line="762" selection-end-column="40" />
+        <state relative-caret-position="200">
+          <caret line="696" column="0" lean-forward="false" selection-start-line="696" selection-start-column="0" selection-end-line="696" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adata/Db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e11dab4b-3a81-4924-9059-1df2a9424427/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbSrc:///6e98fd85/e11dab4b-3a81-4924-9059-1df2a9424427/database/cinadsac_inmobiliaria/schema/public/routine/pa_facturacion_propiedad_saldomes_listar@(varchar,smallint,smallint,varchar).sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cinadsacv2.sublime-project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/facturacion/facturacion-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/facturacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="230" column="13" lean-forward="false" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/archivos/archivos-post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-223">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/tabla.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/tabla/tabla-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/reporteria/reporteador-post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="e#915#58772#0#PHP" expanded="false" />
-            <element signature="e#1991#2423#0#PHP" expanded="false" />
-            <element signature="e#2428#3355#0#PHP" expanded="false" />
-            <element signature="e#3360#3831#0#PHP" expanded="false" />
-            <element signature="e#3836#5231#0#PHP" expanded="false" />
-            <element signature="e#5236#6521#0#PHP" expanded="false" />
-            <element signature="e#6526#8521#0#PHP" expanded="false" />
-            <element signature="e#8526#9162#0#PHP" expanded="false" />
-            <element signature="e#9167#9857#0#PHP" expanded="false" />
-            <element signature="e#9862#10839#0#PHP" expanded="false" />
-            <element signature="e#10844#11367#0#PHP" expanded="false" />
-            <element signature="e#13856#14192#0#PHP" expanded="false" />
-            <element signature="e#14520#14549#0#PHP" expanded="false" />
-            <element signature="e#14657#16661#0#PHP" expanded="false" />
-            <element signature="e#18267#19571#0#PHP" expanded="false" />
-            <element signature="e#20251#20630#0#PHP" expanded="false" />
-            <element signature="e#20644#21227#0#PHP" expanded="false" />
-            <element signature="e#21160#21227#0#PHP" expanded="false" />
-            <element signature="e#21241#21741#0#PHP" expanded="false" />
-            <element signature="e#21674#21741#0#PHP" expanded="false" />
-            <element signature="e#22188#22255#0#PHP" expanded="false" />
-            <element signature="e#22269#22669#0#PHP" expanded="false" />
-            <element signature="e#23037#24612#0#PHP" expanded="false" />
-            <element signature="e#25051#25662#0#PHP" expanded="false" />
-            <element signature="e#28646#29406#0#PHP" expanded="false" />
-            <element signature="e#29113#29406#0#PHP" expanded="false" />
-            <element signature="e#30011#30839#0#PHP" expanded="false" />
-            <element signature="e#30122#30839#0#PHP" expanded="false" />
-            <element signature="e#31277#31379#0#PHP" expanded="false" />
-            <element signature="e#32584#37389#0#PHP" expanded="false" />
-            <element signature="e#32826#37219#0#PHP" expanded="false" />
-            <element signature="e#37234#37389#0#PHP" expanded="false" />
-            <element signature="e#41722#52197#0#PHP" expanded="false" />
-            <element signature="e#52202#58772#0#PHP" expanded="false" />
-            <marker date="1521998300830" expanded="false" signature="31045:31272" ph="..." />
+            <element signature="e#17353#19341#0#PHP" expanded="false" />
+            <marker date="1523646758417" expanded="true" signature="9506:9521" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="9571:9605" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="9857:9872" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="9910:9925" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="9968:9987" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="10131:10148" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="17795:18154" ph="..." />
+            <marker date="1523646758417" expanded="true" signature="17808:18100" ph="..." />
           </folding>
         </state>
       </provider>

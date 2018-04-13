@@ -1,4 +1,5 @@
 <?php
+
 class clsTabla
 {
 	function clsTabla()

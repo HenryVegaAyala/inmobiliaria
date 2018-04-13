@@ -50,8 +50,9 @@ elseif ($tipo == 'FACTURACIONPROP__SUMADEUDA') {
 	$row = $objData->ListarFacturacionPropiedad__SumaDeuda($idproyecto, $anho, $mes, $idpropiedad);
 	$row = array('sumadeuda_mes' => $row);
 }
-elseif ($tipo == 'FACTURACIONPROP__SALDOMES')
+elseif ($tipo == 'FACTURACIONPROP__SALDOMES'){
 	$row = $objData->ListarFacturacionPropiedad__SaldoMes($idproyecto, $anho, $mes, $idpropiedad);
+}
 elseif ($tipo == 'TORRES')
 	$row = $objData->ListarConsumoAscensor($tipobusqueda, $idproyecto, $anho, $mes);
 elseif ($tipo == 'INCIDENCIAS')
