@@ -130,7 +130,51 @@ if ($_POST) {
             require '../../common/PHPExcel/Writer/Excel2007.php';
 
             $objPHPExcel = new PHPExcel();
-            $objPHPExcel->setActiveSheetIndex(0);
+            $objPHPExcel->setActiveSheetIndex();
+
+            $objPHPExcel->getProperties()
+                ->setCreator('Cinadsac')
+                ->setLastModifiedBy('Cinadsac')
+                ->setTitle('Reporte')
+                ->setSubject('Reporte')
+                ->setDescription('Reporte')
+                ->setKeywords('Reporte')
+                ->setCategory('Reporte');
+
+            $objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFont()->setBold(true);
+
+            if (trim($hdTipoReporte) === 'RECAUDACION') {
+                $objPHPExcel->getActiveSheet()->setTitle('Recaudación');
+                $i = 2;
+                $objPHPExcel->getActiveSheet()->getStyle('A' . $i . ':' . 'H' . $i)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+                foreach (range('A', 'H') as $letra) {
+                    if (in_array($letra, ['A', 'B', 'C'], true)) {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(12);
+                    } elseif ('H' === $letra) {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(25);
+                    } else {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(20);
+                    }
+                    $i++;
+                }
+                $objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFill()->getStartColor()->setRGB('244062');
+            } else {
+                $objPHPExcel->getActiveSheet()->setTitle('Pendientes');
+                $i = 2;
+                $objPHPExcel->getActiveSheet()->getStyle('A' . $i . ':' . 'F' . $i)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+                foreach (range('A', 'F') as $letra) {
+                    if (in_array($letra, ['A', 'B', 'C'], true)) {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(12);
+                    } elseif ('F' === $letra) {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(25);
+                    } else {
+                        $objPHPExcel->setActiveSheetIndex()->getColumnDimension($letra)->setWidth(20);
+                    }
+                    $i++;
+                }
+                $objPHPExcel->getActiveSheet()->getStyle('A2:F2')->getFill()->getStartColor()->setRGB('244062');
+            }
+
         }
 
         if ($ddlTipoReporte === '04' || $ddlTipoReporte === '05' || $ddlTipoReporte === '07') {
@@ -252,14 +296,20 @@ if ($_POST) {
                 $totalGasto += $rsGastoResumen[$i]['importe'];
             }
 
-            $totalEstimacion = $objEstadoResultados->ObtenerEstimacion_Proyecto($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
-            $cuentaEstimacion = $objEstadoResultados->ObtenerEstimacion_Proyecto__Count($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
+            $totalEstimacion = $objEstadoResultados->ObtenerEstimacion_Proyecto($conectar, $hdIdProyecto, $ddlAnho,
+                $ddlMes);
+            $cuentaEstimacion = $objEstadoResultados->ObtenerEstimacion_Proyecto__Count($conectar, $hdIdProyecto,
+                $ddlAnho, $ddlMes);
 
-            $totalRecaudado = $objEstadoResultados->ObtenerImporte_Proyecto($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
-            $cuentaRecaudado = $objEstadoResultados->ObtenerImporte_Proyecto__Count($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
+            $totalRecaudado = $objEstadoResultados->ObtenerImporte_Proyecto($conectar, $hdIdProyecto, $ddlAnho,
+                $ddlMes);
+            $cuentaRecaudado = $objEstadoResultados->ObtenerImporte_Proyecto__Count($conectar, $hdIdProyecto, $ddlAnho,
+                $ddlMes);
 
-            $totalPendiente = $objEstadoResultados->Propiedades_Pendientes__Suma($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
-            $cuentaPendiente = $objEstadoResultados->Propiedades_Pendientes__Count($conectar, $hdIdProyecto, $ddlAnho, $ddlMes);
+            $totalPendiente = $objEstadoResultados->Propiedades_Pendientes__Suma($conectar, $hdIdProyecto, $ddlAnho,
+                $ddlMes);
+            $cuentaPendiente = $objEstadoResultados->Propiedades_Pendientes__Count($conectar, $hdIdProyecto, $ddlAnho,
+                $ddlMes);
 
             $objEstadoResultados->_desconectar($conectar);
 
@@ -268,7 +318,8 @@ if ($_POST) {
             $_mes = $meses[$ddlMes - 1];
 
             $contentBody = str_replace('[logocinadsac]', 'dist/img/logo-cinadsac.jpg', $contenido);
-            $contentBody = str_replace('[logoproyecto]', ($logoproyecto === 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $logoproyecto), $contentBody);
+            $contentBody = str_replace('[logoproyecto]',
+                ($logoproyecto === 'no-set' ? 'dist/img/logo-cinadsac.jpg' : $logoproyecto), $contentBody);
             $contentBody = str_replace('[nombreproyecto]', $nombreproyecto, $contentBody);
             $contentBody = str_replace('[contentgasto]', $strfilas__gasto, $contentBody);
             $contentBody = str_replace('[anho_proceso]', $ddlAnho, $contentBody);
@@ -301,16 +352,14 @@ if ($_POST) {
                 if ($hdTipoFormato === 'PDF') {
                     $contentBody .= '<table border="1" cellspacing="0" cellpadding="1"><thead><tr>';
                 } else {
-                    $objPHPExcel->getActiveSheet()->setCellValue('A1', $tituloreporte);
+//                    $objPHPExcel->getActiveSheet()->setCellValue('A1', $tituloreporte);
                 }
 
                 $columns = array_keys($row[0]);
-
                 $counterColXLS = 0;
-
                 foreach ($columns as $key => $value) {
                     if ($value !== 'idfacturacion') {
-                        if ($value === 'propietario' && $ddlTipoReporte != '05') {
+                        if ($value === 'propietario' && $ddlTipoReporte !== '05') {
                             continue;
                         }
 
@@ -321,7 +370,15 @@ if ($_POST) {
                         if ($hdTipoFormato === 'PDF') {
                             $strcolumnas .= '<th valign="middle" class="text-center" bordercolor="white" bgcolor="black" color="white">' . $value . '</th>';
                         } elseif ($hdTipoFormato === 'EXCEL') {
-                            $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($counterColXLS, 2, $value);
+                            if (trim($hdTipoReporte) === 'RECAUDACION') {
+                                $objPHPExcel->getActiveSheet()->getStyle('A' . 2 . ':' . 'H' . 2)->getBorders()->getAllBorders()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+                                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($counterColXLS, 2,
+                                    str_replace('_', ' ', strtoupper($value)));
+                            } else {
+                                $objPHPExcel->getActiveSheet()->getStyle('A' . 2 . ':' . 'F' . 2)->getBorders()->getAllBorders()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+                                $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($counterColXLS, 2,
+                                    str_replace('_', ' ', strtoupper($value)));
+                            }
                         }
 
                         ++$counterColXLS;
@@ -334,13 +391,36 @@ if ($_POST) {
 
                 $i = 0;
                 $totalratio = 0;
-
                 while ($i < $countrow) {
                     if ($hdTipoFormato === 'PDF') {
                         $strfilas .= '<tr>';
                     }
 
                     $counterColXLS = 0;
+
+                    if ($hdTipoFormato === 'EXCEL') {
+                        if (trim($hdTipoReporte) === 'RECAUDACION') {
+                            $rows = ($i + 3);
+                            $objPHPExcel->getActiveSheet()->getStyle('A' . $rows . ':' . 'H' . $rows)
+                                ->getBorders()
+                                ->getAllBorders()
+                                ->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+                            $objPHPExcel->getActiveSheet()->getStyle('A' . $rows . ':' . 'H' . $rows)
+                                ->getAlignment()
+                                ->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+                        } else {
+                            $rows = ($i + 3);
+                            $objPHPExcel->getActiveSheet()->getStyle('A' . $rows . ':' . 'F' . $rows)
+                                ->getBorders()
+                                ->getAllBorders()
+                                ->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+                            $objPHPExcel->getActiveSheet()->getStyle('A' . $rows . ':' . 'F' . $rows)
+                                ->getAlignment()
+                                ->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+                        }
+                    }
 
                     foreach ($columns as $key => $value) {
                         if ($ddlTipoReporte === '06') {
@@ -358,7 +438,7 @@ if ($_POST) {
                         }
 
                         if ($value !== 'idfacturacion') {
-                            if ($value === 'propietario' && $ddlTipoReporte != '05') {
+                            if ($value === 'propietario' && $ddlTipoReporte !== '05') {
                                 continue;
                             }
 
@@ -368,7 +448,7 @@ if ($_POST) {
 
                                     $strfilas .= '<td class="' . $right_align . ' ' . $csstotal . '">' . $row[$i][$value] . '</td>';
                                 } elseif ($hdTipoFormato === 'EXCEL') {
-                                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($counterColXLS, ($i + 3),
+                                    $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow($counterColXLS, $i + 3,
                                         $row[$i][$value]);
                                 }
                             }
@@ -390,6 +470,7 @@ if ($_POST) {
                     if ($hdTipoFormato === 'PDF') {
                         $strfilas .= '<tr><td class="text-right csstotal">TOTALES</td><td class="text-right csstotal">' . $totalFormateado . '</td><td class="text-right csstotal"></td><td class="text-right csstotal"></td><td class="text-right csstotal"></td></tr>';
                     } elseif ($hdTipoFormato === 'EXCEL') {
+
                         $objPHPExcel->getActiveSheet()->setCellValueByColumnAndRow(4, $i + 1, $totalFormateado);
                     }
                 }
@@ -437,8 +518,7 @@ if ($_POST) {
             $pdf->Output($fileReport, 'F');
 
             $contenidomsje = 'media/pdf/' . $nombreFileReporte;
-        }
-        elseif ($hdTipoFormato === 'EXCEL') {
+        } elseif ($hdTipoFormato === 'EXCEL') {
             require_once '../../common/PHPExcel/IOFactory.php';
 
             $fileReport = $folderXLS . $nombreFileReporte;
