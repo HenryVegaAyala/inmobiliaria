@@ -158,6 +158,10 @@ if ($_POST) {
                     $i++;
                 }
                 $objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFill()->getStartColor()->setRGB('244062');
+
+                $objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
+                $objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFill()->getStartColor()->setRGB('244062');
+
             } else {
                 $objPHPExcel->getActiveSheet()->setTitle('Pendientes');
                 $i = 2;
@@ -352,7 +356,7 @@ if ($_POST) {
                 if ($hdTipoFormato === 'PDF') {
                     $contentBody .= '<table border="1" cellspacing="0" cellpadding="1"><thead><tr>';
                 } else {
-//                    $objPHPExcel->getActiveSheet()->setCellValue('A1', $tituloreporte);
+                    $objPHPExcel->getActiveSheet()->setCellValue('A1', $tituloreporte);
                 }
 
                 $columns = array_keys($row[0]);

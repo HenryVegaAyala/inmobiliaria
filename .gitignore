@@ -1,19 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
 .idea
-.idea/*
-.idea/inspectionProfiles/
-.idea/sonarlint/
-.idea/vcs.xml
-.idea/workspace.xml
+logs/
 media/pdf/
 media/xls/
-.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/cina.mZguAA.meta
-.idea/dataSources/882a8708-3734-40f5-825a-f11633a7d767/storage_v2/_src_/database/cina.mZguAA/
-.idea/dataSources/b34d30d5-4720-48a7-8163-ee1a4860a84a.xml
-.idea/dataSources/b34d30d5-4720-48a7-8163-ee1a4860a84a/
-.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427.xml
-.idea/dataSources/e11dab4b-3a81-4924-9059-1df2a9424427/
-/logs/
-adata/.well-known/
-logs/

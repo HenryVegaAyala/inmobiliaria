@@ -13,11 +13,12 @@
             <excludedPath path="/public_html/common" />
             <excludedPath path="/public_html/dist" />
             <excludedPath path="/public_html/plugins" />
-            <excludedPath local="true" path="$PROJECT_DIR$/.well-known" />
             <excludedPath local="true" path="$PROJECT_DIR$/bootstrap" />
             <excludedPath local="true" path="$PROJECT_DIR$/common" />
             <excludedPath local="true" path="$PROJECT_DIR$/dist" />
             <excludedPath local="true" path="$PROJECT_DIR$/plugins" />
+            <excludedPath path="/services" />
+            <excludedPath local="true" path="$PROJECT_DIR$/services" />
           </excludedPaths>
         </serverdata>
       </paths>
